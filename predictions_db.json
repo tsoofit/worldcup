@@ -1,0 +1,484 @@
+{
+  "matches": [
+    {
+      "match": "Canada vs Morocco",
+      "home": "Canada",
+      "away": "Morocco",
+      "model": "GPT",
+      "prediction": {
+        "score_90min": "0-1",
+        "result_90min": "away",
+        "extra_time_probability": 32,
+        "penalty_probability": 24,
+        "final_winner": "away",
+        "confidence": 66,
+        "risk_level": "medium",
+        "reasoning": "Morocco\u2019s defensive organization and tournament experience give them an edge in a tight knockout match. Canada are likely to struggle breaking a structured low block, making a narrow away win more plausible than a high-scoring game."
+      },
+      "actual": {
+        "score_90min": "0-3",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-04T20:53:47.227045"
+    },
+    {
+      "match": "Canada vs Morocco",
+      "home": "Canada",
+      "away": "Morocco",
+      "model": "Claude",
+      "prediction": {
+        "score_90min": "0-1",
+        "result_90min": "away",
+        "extra_time_probability": 25,
+        "penalty_probability": 12,
+        "final_winner": "away",
+        "confidence": 66,
+        "risk_level": "medium",
+        "reasoning": "Morocco's superior individual quality through Hakimi and Saibari, plus their 2022 semifinal pedigree, should produce a narrow breakthrough against a well-organized but less clinical Canada side. Canada's defensive discipline and home support make a single-goal margin or extra time plausible rather than a comfortable Morocco win."
+      },
+      "actual": {
+        "score_90min": "0-3",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-04T20:54:24.637876"
+    },
+    {
+      "match": "Canada vs Morocco",
+      "home": "Canada",
+      "away": "Morocco",
+      "model": "Gemini",
+      "prediction": {
+        "score_90min": "1-1",
+        "result_90min": "draw",
+        "extra_time_probability": 35,
+        "penalty_probability": 20,
+        "final_winner": "away",
+        "confidence": 75,
+        "risk_level": "medium",
+        "reasoning": "Morocco's tactical discipline and superior tournament experience slightly edge out Canada's high-energy attacking style in a tight defensive battle. The match is expected to be a cagey affair where Morocco's defensive organization prevails if the game extends to extra time."
+      },
+      "actual": {
+        "score_90min": "0-3",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-04T20:58:53.440400"
+    },
+    {
+      "match": "Canada vs Morocco",
+      "home": "Canada",
+      "away": "Morocco",
+      "model": "Codex",
+      "prediction": {
+        "score_90min": "1-1",
+        "result_90min": "draw",
+        "extra_time_probability": 100,
+        "penalty_probability": 50,
+        "final_winner": "away",
+        "confidence": 54,
+        "risk_level": "high",
+        "reasoning": "Canada's intensity and home-tournament momentum can trouble Morocco, but Morocco's structure, goalkeeper edge, and knockout experience make them hard to beat outright. A tight 1-1 is the most realistic 90-minute path, with Morocco slightly likelier to survive extra time or penalties."
+      },
+      "actual": {
+        "score_90min": "0-3",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-04T20:59:20.740786"
+    },
+    {
+      "match": "Canada vs Morocco",
+      "home": "Canada",
+      "away": "Morocco",
+      "model": "Tsoofit",
+      "prediction": {
+        "score_90min": "1-3",
+        "result_90min": "away",
+        "extra_time_probability": 0,
+        "penalty_probability": 0,
+        "final_winner": "away",
+        "confidence": 80,
+        "risk_level": "high",
+        "reasoning": "Morocco is stronger and more impressive than Canada"
+      },
+      "actual": {
+        "score_90min": "0-3",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-04T20:59:20.740786"
+    },
+    {
+      "match": "France vs Paraguay",
+      "home": "France",
+      "away": "Paraguay",
+      "model": "GPT",
+      "prediction": {
+        "score_90min": "1-0",
+        "result_90min": "home",
+        "extra_time_probability": 28,
+        "penalty_probability": 18,
+        "final_winner": "home",
+        "confidence": 78,
+        "risk_level": "medium",
+        "reasoning": "France\u2019s superior squad depth and attacking quality make them more likely to break a compact defensive side in a tight knockout match. Paraguay\u2019s low-block approach should keep the game close but may not be enough to sustain a draw for 90 minutes."
+      },
+      "actual": {
+        "score_90min": "1-0",
+        "result_90min": "home",
+        "final_winner": "home",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-04T21:00:07.637927"
+    },
+    {
+      "match": "France vs Paraguay",
+      "home": "France",
+      "away": "Paraguay",
+      "model": "Claude",
+      "prediction": {
+        "score_90min": "2-0",
+        "result_90min": "home",
+        "extra_time_probability": 12,
+        "penalty_probability": 6,
+        "final_winner": "home",
+        "confidence": 85,
+        "risk_level": "low",
+        "reasoning": "France's elite attacking trio of Mbappe, Olise and Dembele have scored 13 goals in four matches and should break down Paraguay's low block within normal time. Paraguay's shootout heroics against Germany relied on limiting clear chances, a far harder task against this level of French firepower."
+      },
+      "actual": {
+        "score_90min": "1-0",
+        "result_90min": "home",
+        "final_winner": "home",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-04T21:00:33.981449"
+    },
+    {
+      "match": "France vs Paraguay",
+      "home": "France",
+      "away": "Paraguay",
+      "model": "Gemini",
+      "prediction": {
+        "score_90min": "2-0",
+        "result_90min": "home",
+        "extra_time_probability": 0,
+        "penalty_probability": 0,
+        "final_winner": "home",
+        "confidence": 85,
+        "risk_level": "low",
+        "reasoning": "France possesses significant superior squad depth and tactical versatility compared to Paraguay. Their clinical attack is expected to break down Paraguay's disciplined block within regulation time."
+      },
+      "actual": {
+        "score_90min": "1-0",
+        "result_90min": "home",
+        "final_winner": "home",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-04T21:01:37.970883"
+    },
+    {
+      "match": "France vs Paraguay",
+      "home": "France",
+      "away": "Paraguay",
+      "model": "Codex",
+      "prediction": {
+        "score_90min": "2-0",
+        "result_90min": "home",
+        "extra_time_probability": 0,
+        "penalty_probability": 0,
+        "final_winner": "home",
+        "confidence": 72,
+        "risk_level": "medium",
+        "reasoning": "France have the deeper squad, superior attacking efficiency, and enough defensive control to limit a Paraguay side likely to sit low. Paraguay can keep it tight for long spells, but France's individual quality makes a controlled 2-0 the most likely 90-minute outcome."
+      },
+      "actual": {
+        "score_90min": "1-0",
+        "result_90min": "home",
+        "final_winner": "home",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-04T21:02:00.179992"
+    },
+    {
+      "match": "France vs Paraguay",
+      "home": "France",
+      "away": "Paraguay",
+      "model": "Tsoofit",
+      "prediction": {
+        "score_90min": "4-0",
+        "result_90min": "home",
+        "extra_time_probability": 0,
+        "penalty_probability": 0,
+        "final_winner": "home",
+        "confidence": 5806,
+        "risk_level": "high",
+        "reasoning": "France is stronger and more impressive than Paraguay"
+      },
+      "actual": {
+        "score_90min": "1-0",
+        "result_90min": "home",
+        "final_winner": "home",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-04T21:02:00.179992"
+    },
+    {
+      "match": "Brazil vs Norway",
+      "home": "Brazil",
+      "away": "Norway",
+      "model": "GPT",
+      "prediction": {
+        "score_90min": "2-1",
+        "result_90min": "home",
+        "extra_time_probability": 30,
+        "penalty_probability": 19,
+        "final_winner": "home",
+        "confidence": 72,
+        "risk_level": "medium",
+        "reasoning": "Brazil\u2019s greater attacking depth and individual quality give them the edge, but Norway\u2019s direct threat and finishing ability make a clean sheet unlikely. Brazil are more likely to create the decisive chance before extra time."
+      },
+      "actual": {
+        "score_90min": "1-2",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-05T16:59:18.155235"
+    },
+    {
+      "match": "Brazil vs Norway",
+      "home": "Brazil",
+      "away": "Norway",
+      "model": "Claude",
+      "prediction": {
+        "score_90min": "2-1",
+        "result_90min": "home",
+        "extra_time_probability": 20,
+        "penalty_probability": 10,
+        "final_winner": "home",
+        "confidence": 62,
+        "risk_level": "medium",
+        "reasoning": "Brazil have greater squad depth and are narrow betting favorites, but Norway's Haaland-Odegaard partnership has troubled elite defenses and both teams have shown defensive vulnerabilities. Expect an open, high-scoring knockout tie where Brazil's superior bench and experience prove decisive in the closing stages."
+      },
+      "actual": {
+        "score_90min": "1-2",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-05T16:59:50.788505"
+    },
+    {
+      "match": "Brazil vs Norway",
+      "home": "Brazil",
+      "away": "Norway",
+      "model": "Gemini",
+      "prediction": {
+        "score_90min": "1-0",
+        "result_90min": "home",
+        "extra_time_probability": 10,
+        "penalty_probability": 0,
+        "final_winner": "home",
+        "confidence": 80,
+        "risk_level": "low",
+        "reasoning": "Brazil's superior individual quality and attacking creativity are expected to overcome Norway's compact defensive structure. Norway will likely play conservatively to minimize space, but Brazil's ability to create moments of magic should secure a narrow regulation win."
+      },
+      "actual": {
+        "score_90min": "1-2",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-05T17:00:17.606169"
+    },
+    {
+      "match": "Brazil vs Norway",
+      "home": "Brazil",
+      "away": "Norway",
+      "model": "Codex",
+      "prediction": {
+        "score_90min": "2-1",
+        "result_90min": "home",
+        "extra_time_probability": 0,
+        "penalty_probability": 0,
+        "final_winner": "home",
+        "confidence": 63,
+        "risk_level": "medium",
+        "reasoning": "Norway's Haaland-led direct threat makes a clean Brazil win less secure, especially if Brazil leave space in transition. Brazil still have superior squad depth, technical control, and knockout experience, making a narrow 90-minute win the most likely outcome."
+      },
+      "actual": {
+        "score_90min": "1-2",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-05T17:00:37.581786"
+    },
+    {
+      "match": "Brazil vs Norway",
+      "home": "Brazil",
+      "away": "Norway",
+      "model": "Tsoofit",
+      "prediction": {
+        "score_90min": "2-2",
+        "result_90min": "draw",
+        "extra_time_probability": 100,
+        "penalty_probability": 48,
+        "final_winner": "home",
+        "confidence": 56,
+        "risk_level": "high",
+        "reasoning": "Brazil is stronger and more experienced than Norway"
+      },
+      "actual": {
+        "score_90min": "1-2",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-05T17:03:31.618286"
+    },
+    {
+      "match": "Mexico vs England",
+      "home": "Mexico",
+      "away": "England",
+      "model": "GPT",
+      "prediction": {
+        "score_90min": "1-1",
+        "result_90min": "draw",
+        "extra_time_probability": 43,
+        "penalty_probability": 29,
+        "final_winner": "away",
+        "confidence": 68,
+        "risk_level": "medium",
+        "reasoning": "Mexico's intensity and transition threat can trouble England, but England have greater squad depth and defensive quality. A cautious 90-minute draw is plausible, with England more likely to edge the tie after regulation."
+      },
+      "actual": {
+        "score_90min": "2-3",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-05T17:02:30.629405"
+    },
+    {
+      "match": "Mexico vs England",
+      "home": "Mexico",
+      "away": "England",
+      "model": "Claude",
+      "prediction": {
+        "score_90min": "1-1",
+        "result_90min": "draw",
+        "extra_time_probability": 55,
+        "penalty_probability": 30,
+        "final_winner": "away",
+        "confidence": 55,
+        "risk_level": "high",
+        "reasoning": "Mexico's unbeaten Azteca record, altitude advantage and clean-sheet run make this a tight contest, but England's superior individual quality via Harry Kane should eventually find a breakthrough. Expect a cagey, low-scoring game that likely needs extra time or penalties before England's greater depth and firepower prevail."
+      },
+      "actual": {
+        "score_90min": "2-3",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-05T17:02:50.282308"
+    },
+    {
+      "match": "Mexico vs England",
+      "home": "Mexico",
+      "away": "England",
+      "model": "Gemini",
+      "prediction": {
+        "score_90min": "0-1",
+        "result_90min": "away",
+        "extra_time_probability": 0,
+        "penalty_probability": 0,
+        "final_winner": "away",
+        "confidence": 70,
+        "risk_level": "medium",
+        "reasoning": "England's superior squad depth and tournament experience are likely to break down Mexico's organized defensive structure. Mexico will aim to frustrate and counter-attack, but England's ability to control possession should secure a narrow victory."
+      },
+      "actual": {
+        "score_90min": "2-3",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-05T17:03:15.144858"
+    },
+    {
+      "match": "Mexico vs England",
+      "home": "Mexico",
+      "away": "England",
+      "model": "Codex",
+      "prediction": {
+        "score_90min": "1-1",
+        "result_90min": "draw",
+        "extra_time_probability": 100,
+        "penalty_probability": 48,
+        "final_winner": "away",
+        "confidence": 56,
+        "risk_level": "high",
+        "reasoning": "England have the stronger squad and higher ceiling, but Mexico at the Azteca should make this slower, hostile, and physically awkward rather than clean. A 1-1 after 90 minutes fits the tactical pressure, with England slightly more likely to progress through extra time or penalties."
+      },
+      "actual": {
+        "score_90min": "2-3",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-05T17:03:31.618286"
+    },
+    {
+      "match": "Mexico vs England",
+      "home": "Mexico",
+      "away": "England",
+      "model": "Tsoofit",
+      "prediction": {
+        "score_90min": "2-1",
+        "result_90min": "home",
+        "extra_time_probability": 100,
+        "penalty_probability": 48,
+        "final_winner": "home",
+        "confidence": 56,
+        "risk_level": "high",
+        "reasoning": "Mexico hosts in their stadium and height conditions, and impresses so far more than England"
+      },
+      "actual": {
+        "score_90min": "2-3",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
+      "created_at": "2026-07-05T17:03:31.618286"
+    }
+  ]
+}
