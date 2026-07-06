@@ -243,7 +243,7 @@ st.set_page_config(
 )
 
 st.title(
-    "⚽ World Cup Knockout AI Prediction League"
+    "⚽ World Cup Knockout Prediction League: Man against the (AI) Machine"
 )
 
 st.caption(
