@@ -330,7 +330,8 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("⚽ World Cup Knockout AI Prediction League")
+st.title("⚽ World Cup Knockout Prediction League: " \
+    "Man against the (AI) Machine")
 
 st.caption(
     "AI models vs human prediction benchmark. "
