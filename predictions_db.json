@@ -498,7 +498,13 @@
         "risk_level": "high",
         "reasoning": "Spain\u2019s midfield control, defensive form, and wide attacking threat give them a narrow edge, but Portugal\u2019s squad depth and knockout experience make this very tight. The matchup points to a conservative, low-margin game with a realistic extra-time scenario. Spain are slightly more likely to create the cleaner chances and advance."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "0-1",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-06T19:16:37.079038"
     },
     {
@@ -519,7 +525,13 @@
         "risk_level": "medium",
         "reasoning": "Spain arrive unbeaten with five clean sheets and superior control through Pedri, Rodri and Oyarzabal, while Portugal have looked shakier, needing a stoppage-time winner to escape the previous round. Ronaldo's threat and Portugal's set-piece quality should get them on the scoresheet, but Spain's defensive discipline and better recent form should be enough to edge this Iberian derby."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "0-1",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-06T19:16:53.862729"
     },
     {
@@ -540,7 +552,13 @@
         "risk_level": "high",
         "reasoning": "This is a tactical stalemate between two evenly matched teams who prioritize defensive discipline and controlled possession. Portugal possesses a slight edge in individual creativity and penalty shootout pedigree that should prove decisive in a high-pressure environment. The matchup is expected to be cagey, with both sides minimizing risks until extra time or penalties."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "0-1",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-06T19:17:44.030067"
     },
     {
@@ -561,7 +579,13 @@
         "risk_level": "high",
         "reasoning": "Spain enter with better tournament rhythm, stronger midfield control, and a cleaner defensive profile, while Portugal have a full squad but have looked less stable. The matchup points to a cautious, low-margin game where Spain are slightly likelier to create the decisive chance."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "0-1",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-06T19:18:15.223252"
     },
     {
@@ -582,7 +606,13 @@
         "risk_level": "high",
         "reasoning": "Spain enter with better tournament rhythm, CR7 suck."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "0-1",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-06T19:19:51.518099"
     },
     {
