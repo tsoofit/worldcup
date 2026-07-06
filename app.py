@@ -17,7 +17,6 @@ POINTS = {
 
 MAX_POINTS = sum(POINTS.values())
 
-
 # --------------------------------------------------
 # DATA
 # --------------------------------------------------
@@ -493,25 +492,21 @@ else:
 # --------------------------------------------------
 # SPLIT MATCHES
 # --------------------------------------------------
-
 completed_matches = [
     match
     for match in unique_matches
-    if match_has_actual(
-        db,
-        match["match"]
-    )
+    if match_has_actual(db, match["match"])
 ]
 
 pending_matches = [
     match
     for match in unique_matches
-    if not match_has_actual(
-        db,
-        match["match"]
-    )
+    if not match_has_actual(db, match["match"])
 ]
 
+# Show newest matches first
+completed_matches = list(reversed(completed_matches))
+pending_matches = list(reversed(pending_matches))
 
 # --------------------------------------------------
 # RENDER MATCH
@@ -610,39 +605,30 @@ def render_match(match):
         )
 
         points = ""
-
         status = "⏳ Pending"
+        is_match_winner = False
 
-        if isinstance(
-            actual,
-            dict
-        ):
+        if isinstance(actual, dict):
+            earned = score_prediction(prediction, actual)
+            points = f"{earned}/{MAX_POINTS}"
 
-            earned = score_prediction(
-                prediction,
-                actual
+            match_max_score = max(
+                score_prediction(i.get("prediction", {}), actual)
+                for i in match_predictions
             )
 
-            points = (
-                f"{earned}/{MAX_POINTS}"
-            )
+            is_match_winner = earned == match_max_score and earned > 0
 
-            if earned == MAX_POINTS:
-
+            if is_match_winner:
+                status = "🥇 Match Winner"
+            elif earned == MAX_POINTS:
                 status = "🏆 Perfect"
-
             elif earned >= 10:
-
                 status = "✅ Good"
-
             elif earned > 0:
-
                 status = "🟡 Partial"
-
             else:
-
                 status = "❌ Miss"
-
 
         rows.append({
 
@@ -655,9 +641,13 @@ def render_match(match):
 
             "Model":
                 (
-                    "15y old teenager"
-                    if is_human(model)
-                    else model
+                    f"🥇 {'15y old teenager' if is_human(model) else model}"
+                    if is_match_winner
+                    else (
+                        "15y old teenager"
+                        if is_human(model)
+                        else model
+                    )
                 ),
             "90min Result":
                 map_result(
@@ -719,8 +709,18 @@ def render_match(match):
         rows
     )
 
+    def highlight_match_winner(row):
+        if row["Status"] == "🥇 Match Winner":
+            return ["font-weight: bold" for _ in row]
+        return ["" for _ in row]
+
+    styled_prediction_df = prediction_df.style.apply(
+        highlight_match_winner,
+        axis=1
+    )
+
     st.dataframe(
-        prediction_df,
+        styled_prediction_df,
         use_container_width=True,
         hide_index=True
     )
