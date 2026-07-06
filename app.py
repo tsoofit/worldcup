@@ -4,10 +4,15 @@ import os
 import pandas as pd
 import hmac
 import altair as alt
+from datetime import datetime
 
 DATA_FILE = "predictions_db.json"
 
-POINTS = {
+# Scoring v2 starts from this date onward.
+# Predictions created before this date continue using v1.
+SCORING_V2_START_DATE = "2026-07-06"
+
+POINTS_V1 = {
     "final_winner": 5,
     "result_90min": 3,
     "exact_score": 5,
@@ -15,7 +20,18 @@ POINTS = {
     "penalties": 2,
 }
 
-MAX_POINTS = sum(POINTS.values())
+POINTS_V2 = {
+    "final_winner": 4,
+    "result_90min": 3,
+    "exact_score": 5,
+    "extra_time": 2,
+    "penalties": 2,
+    "probability_calibration": 4,
+}
+
+MAX_POINTS_V1 = sum(POINTS_V1.values())
+MAX_POINTS_V2 = sum(POINTS_V2.values())
+
 
 # --------------------------------------------------
 # DATA
@@ -103,6 +119,13 @@ def is_human(model_name):
     return model_name.lower().strip() in human_names
 
 
+def display_model_name(model):
+    if is_human(model):
+        return "15y old teenager"
+
+    return model
+
+
 def match_has_actual(db, match_name):
     match_predictions = [
         item
@@ -119,44 +142,116 @@ def match_has_actual(db, match_name):
     )
 
 
+def parse_created_at(item):
+    raw = item.get("created_at")
+
+    if not raw:
+        return None
+
+    try:
+        return datetime.fromisoformat(raw).date()
+    except Exception:
+        return None
+
+
+def use_scoring_v2(item):
+    created_date = parse_created_at(item)
+
+    if created_date is None:
+        return False
+
+    return created_date >= datetime.fromisoformat(SCORING_V2_START_DATE).date()
+
+
 # --------------------------------------------------
 # SCORING
 # --------------------------------------------------
 
-def score_prediction(prediction, actual):
+def probability_points(prediction, actual):
+    actual_result = actual.get("result_90min")
+
+    probability_by_result = {
+        "home": prediction.get("home_win_probability"),
+        "draw": prediction.get("draw_probability"),
+        "away": prediction.get("away_win_probability"),
+    }
+
+    probability = probability_by_result.get(actual_result)
+
+    if probability is None:
+        return 0
+
+    try:
+        probability = int(probability)
+    except Exception:
+        return 0
+
+    if probability >= 60:
+        return 4
+
+    if probability >= 45:
+        return 3
+
+    if probability >= 33:
+        return 2
+
+    if probability >= 25:
+        return 1
+
+    return 0
+
+
+def score_prediction_v1(prediction, actual):
     score = 0
 
-    if (
-        prediction.get("final_winner")
-        == actual.get("final_winner")
-    ):
-        score += POINTS["final_winner"]
+    if prediction.get("final_winner") == actual.get("final_winner"):
+        score += POINTS_V1["final_winner"]
 
-    if (
-        prediction.get("result_90min")
-        == actual.get("result_90min")
-    ):
-        score += POINTS["result_90min"]
+    if prediction.get("result_90min") == actual.get("result_90min"):
+        score += POINTS_V1["result_90min"]
 
-    if (
-        prediction.get("score_90min")
-        == actual.get("score_90min")
-    ):
-        score += POINTS["exact_score"]
+    if prediction.get("score_90min") == actual.get("score_90min"):
+        score += POINTS_V1["exact_score"]
 
-    if (
-        predicted_extra_time(prediction)
-        == actual.get("went_extra_time")
-    ):
-        score += POINTS["extra_time"]
+    if predicted_extra_time(prediction) == actual.get("went_extra_time"):
+        score += POINTS_V1["extra_time"]
 
-    if (
-        predicted_penalties(prediction)
-        == actual.get("went_penalties")
-    ):
-        score += POINTS["penalties"]
+    if predicted_penalties(prediction) == actual.get("went_penalties"):
+        score += POINTS_V1["penalties"]
 
     return score
+
+
+def score_prediction_v2(prediction, actual):
+    score = 0
+
+    if prediction.get("final_winner") == actual.get("final_winner"):
+        score += POINTS_V2["final_winner"]
+
+    if prediction.get("result_90min") == actual.get("result_90min"):
+        score += POINTS_V2["result_90min"]
+
+    if prediction.get("score_90min") == actual.get("score_90min"):
+        score += POINTS_V2["exact_score"]
+
+    if predicted_extra_time(prediction) == actual.get("went_extra_time"):
+        score += POINTS_V2["extra_time"]
+
+    if predicted_penalties(prediction) == actual.get("went_penalties"):
+        score += POINTS_V2["penalties"]
+
+    score += probability_points(prediction, actual)
+
+    return score
+
+
+def score_prediction_for_item(item, actual):
+    prediction = item.get("prediction", {})
+
+    if use_scoring_v2(item):
+        return score_prediction_v2(prediction, actual), MAX_POINTS_V2, "v2"
+
+    return score_prediction_v1(prediction, actual), MAX_POINTS_V1, "v1"
 
 
 def compute_leaderboard(db):
@@ -170,39 +265,34 @@ def compute_leaderboard(db):
             continue
 
         model = item.get("model", "unknown")
-        prediction = item.get("prediction", {})
 
         if model not in stats:
-
             stats[model] = {
-                "Model":
-                (
-                    "15y old teenager"
-                    if is_human(model)
-                    else model
-                ),
-                "Type": (
-                    "👤 Human"
-                    if is_human(model)
-                    else "🤖 AI"
-                ),
+                "Model": display_model_name(model),
+                "Type": "👤 Human" if is_human(model) else "🤖 AI",
                 "Points": 0,
                 "Max Points": 0,
                 "Matches": 0,
+                "V1 Matches": 0,
+                "V2 Matches": 0,
                 "Success Rate": 0.0
             }
 
-        earned = score_prediction(
-            prediction,
+        earned, max_points, scoring_version = score_prediction_for_item(
+            item,
             actual
         )
 
         stats[model]["Points"] += earned
-        stats[model]["Max Points"] += MAX_POINTS
+        stats[model]["Max Points"] += max_points
         stats[model]["Matches"] += 1
 
-    for model in stats:
+        if scoring_version == "v2":
+            stats[model]["V2 Matches"] += 1
+        else:
+            stats[model]["V1 Matches"] += 1
 
+    for model in stats:
         stats[model]["Success Rate"] = round(
             stats[model]["Points"]
             / stats[model]["Max Points"]
@@ -219,9 +309,7 @@ def compute_leaderboard(db):
 
 def check_admin_password(password):
     try:
-        expected_password = st.secrets[
-            "ADMIN_PASSWORD"
-        ]
+        expected_password = st.secrets["ADMIN_PASSWORD"]
 
     except Exception:
         return False
@@ -242,16 +330,14 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title(
-    "⚽ World Cup Knockout Prediction League: Man against the (AI) Machine"
-)
+st.title("⚽ World Cup Knockout AI Prediction League")
 
 st.caption(
-    "AI models vs human prediction benchmark"
+    "AI models vs human prediction benchmark. "
+    f"Scoring v2 applies to predictions created from {SCORING_V2_START_DATE} onward."
 )
 
 db = load_db()
-
 unique_matches = get_unique_matches(db)
 
 
@@ -274,31 +360,23 @@ if not st.session_state.admin_authenticated:
 
     if st.sidebar.button("Login"):
 
-        if check_admin_password(
-            admin_password
-        ):
+        if check_admin_password(admin_password):
 
             st.session_state.admin_authenticated = True
-
             st.rerun()
 
         else:
 
-            st.sidebar.error(
-                "Incorrect password"
-            )
+            st.sidebar.error("Incorrect password")
 
 
 else:
 
-    st.sidebar.success(
-        "Admin mode enabled"
-    )
+    st.sidebar.success("Admin mode enabled")
 
     if st.sidebar.button("Logout"):
 
         st.session_state.admin_authenticated = False
-
         st.rerun()
 
 
@@ -309,10 +387,7 @@ else:
 if st.session_state.admin_authenticated:
 
     st.sidebar.divider()
-
-    st.sidebar.header(
-        "Update Actual Result"
-    )
+    st.sidebar.header("Update Actual Result")
 
     if unique_matches:
 
@@ -360,67 +435,33 @@ if st.session_state.admin_authenticated:
             else "away"
         )
 
-        went_extra_time = st.sidebar.checkbox(
-            "Went to extra time"
-        )
+        went_extra_time = st.sidebar.checkbox("Went to extra time")
+        went_penalties = st.sidebar.checkbox("Went to penalties")
 
-        went_penalties = st.sidebar.checkbox(
-            "Went to penalties"
-        )
+        if st.sidebar.button("Save actual result"):
 
-        if st.sidebar.button(
-            "Save actual result"
-        ):
-
-            if (
-                not actual_score
-                or actual_90_result is None
-            ):
+            if not actual_score or actual_90_result is None:
 
                 st.sidebar.error(
-                    "Enter a valid score such as "
-                    "1-1 or 2-0."
+                    "Enter a valid score such as 1-1 or 2-0."
                 )
 
             else:
 
                 actual_data = {
-                    "score_90min":
-                        actual_score.replace(
-                            ":",
-                            "-"
-                        ),
-
-                    "result_90min":
-                        actual_90_result,
-
-                    "final_winner":
-                        final_winner,
-
-                    "went_extra_time":
-                        went_extra_time,
-
-                    "went_penalties":
-                        went_penalties
+                    "score_90min": actual_score.replace(":", "-"),
+                    "result_90min": actual_90_result,
+                    "final_winner": final_winner,
+                    "went_extra_time": went_extra_time,
+                    "went_penalties": went_penalties
                 }
 
                 for item in db["matches"]:
-
-                    if (
-                        item["match"]
-                        == selected_match
-                    ):
-
-                        item["actual"] = (
-                            actual_data
-                        )
+                    if item["match"] == selected_match:
+                        item["actual"] = actual_data
 
                 save_db(db)
-
-                st.sidebar.success(
-                    "Result saved!"
-                )
-
+                st.sidebar.success("Result saved!")
                 st.rerun()
 
 
@@ -428,31 +469,24 @@ if st.session_state.admin_authenticated:
 # LEADERBOARD
 # --------------------------------------------------
 
-st.subheader(
-    "🏆 Prediction Leaderboard"
-)
+st.subheader("🏆 Prediction Leaderboard")
 
 leaderboard_df = compute_leaderboard(db)
 
 if not leaderboard_df.empty:
 
-    leaderboard_df = (
-        leaderboard_df.sort_values(
-            by=[
-                "Success Rate",
-                "Points"
-            ],
-            ascending=False
-        )
+    leaderboard_df = leaderboard_df.sort_values(
+        by=[
+            "Success Rate",
+            "Points"
+        ],
+        ascending=False
     )
 
     leaderboard_df.insert(
         0,
         "Rank",
-        range(
-            1,
-            len(leaderboard_df) + 1
-        )
+        range(1, len(leaderboard_df) + 1)
     )
 
     st.dataframe(
@@ -461,23 +495,26 @@ if not leaderboard_df.empty:
         hide_index=True
     )
 
-    chart_df = (
-        leaderboard_df
-        .set_index("Model")[
-            "Success Rate"
-        ]
+    chart = (
+        alt.Chart(leaderboard_df)
+        .mark_bar()
+        .encode(
+            x=alt.X("Success Rate:Q", title="Success Rate (%)"),
+            y=alt.Y("Model:N", sort="-x"),
+            color=alt.Color("Model:N", legend=None),
+            tooltip=[
+                "Model",
+                "Type",
+                "Points",
+                "Max Points",
+                "Matches",
+                "V1 Matches",
+                "V2 Matches",
+                "Success Rate"
+            ]
+        )
     )
 
-    chart = (
-    alt.Chart(leaderboard_df)
-    .mark_bar()
-    .encode(
-        x=alt.X("Success Rate:Q", title="Success Rate (%)"),
-        y=alt.Y("Model:N", sort="-x"),
-        color=alt.Color("Model:N", legend=None),
-        tooltip=["Model", "Type", "Points", "Max Points", "Matches", "Success Rate"]
-    )
-    )
     st.altair_chart(chart, use_container_width=True)
 
 else:
@@ -492,6 +529,7 @@ else:
 # --------------------------------------------------
 # SPLIT MATCHES
 # --------------------------------------------------
+
 completed_matches = [
     match
     for match in unique_matches
@@ -504,9 +542,9 @@ pending_matches = [
     if not match_has_actual(db, match["match"])
 ]
 
-# Show newest matches first
 completed_matches = list(reversed(completed_matches))
 pending_matches = list(reversed(pending_matches))
+
 
 # --------------------------------------------------
 # RENDER MATCH
@@ -515,9 +553,7 @@ pending_matches = list(reversed(pending_matches))
 def render_match(match):
 
     match_name = match["match"]
-
     home = match["home"]
-
     away = match["away"]
 
     match_predictions = [
@@ -532,25 +568,19 @@ def render_match(match):
         else None
     )
 
-    st.markdown(
-        f"### ⚽ {match_name}"
-    )
-
-    # ACTUAL RESULT
+    st.markdown(f"### ⚽ {match_name}")
 
     if isinstance(actual, dict):
 
         col1, col2, col3 = st.columns(3)
 
         with col1:
-
             st.metric(
                 "90 Min Score",
                 actual["score_90min"]
             )
 
         with col2:
-
             st.metric(
                 "Final Winner",
                 map_result(
@@ -565,11 +595,9 @@ def render_match(match):
             match_end = "90 Minutes"
 
             if actual["went_penalties"]:
-
                 match_end = "Penalties"
 
             elif actual["went_extra_time"]:
-
                 match_end = "Extra Time"
 
             st.metric(
@@ -579,56 +607,59 @@ def render_match(match):
 
     else:
 
-        st.info(
-            "Actual result not updated yet"
-        )
+        st.info("Actual result not updated yet")
 
-
-    # PREDICTIONS TABLE
 
     rows = []
 
     for item in match_predictions:
 
-        prediction = item.get(
-            "prediction",
-            {}
-        )
-
-        actual = item.get(
-            "actual"
-        )
-
-        model = item.get(
-            "model",
-            "unknown"
-        )
+        prediction = item.get("prediction", {})
+        actual = item.get("actual")
+        model = item.get("model", "unknown")
 
         points = ""
         status = "⏳ Pending"
+        scoring_version_display = "Pending"
         is_match_winner = False
 
         if isinstance(actual, dict):
-            earned = score_prediction(prediction, actual)
-            points = f"{earned}/{MAX_POINTS}"
 
-            match_max_score = max(
-                score_prediction(i.get("prediction", {}), actual)
-                for i in match_predictions
+            earned, max_points, scoring_version = score_prediction_for_item(
+                item,
+                actual
             )
 
-            is_match_winner = earned == match_max_score and earned > 0
+            points = f"{earned}/{max_points}"
+            scoring_version_display = scoring_version
+
+            match_scores = [
+                score_prediction_for_item(i, actual)[0]
+                for i in match_predictions
+            ]
+
+            match_max_score = max(match_scores)
+
+            is_match_winner = (
+                earned == match_max_score
+                and earned > 0
+            )
 
             if is_match_winner:
                 status = "🥇 Match Winner"
-            elif earned == MAX_POINTS:
+            elif earned == max_points:
                 status = "🏆 Perfect"
-            elif earned >= 10:
+            elif earned >= (max_points * 0.6):
                 status = "✅ Good"
             elif earned > 0:
                 status = "🟡 Partial"
             else:
                 status = "❌ Miss"
+
+        shown_model = display_model_name(model)
+
+        if is_match_winner:
+            shown_model = f"🥇 {shown_model}"
 
         rows.append({
 
@@ -639,58 +670,47 @@ def render_match(match):
                     else "🤖 AI"
                 ),
 
-            "Model":
-                (
-                    f"🥇 {'15y old teenager' if is_human(model) else model}"
-                    if is_match_winner
-                    else (
-                        "15y old teenager"
-                        if is_human(model)
-                        else model
-                    )
-                ),
+            "Model": shown_model,
+
+            "Scoring": scoring_version_display,
+
             "90min Result":
                 map_result(
-                    prediction.get(
-                        "result_90min"
-                    ),
+                    prediction.get("result_90min"),
                     home,
                     away
                 ),
 
             "Score":
-                prediction.get(
-                    "score_90min"
-                ),
+                prediction.get("score_90min"),
+
+            "Home %":
+                prediction.get("home_win_probability"),
+
+            "Draw %":
+                prediction.get("draw_probability"),
+
+            "Away %":
+                prediction.get("away_win_probability"),
 
             "Extra Time %":
-                prediction.get(
-                    "extra_time_probability"
-                ),
+                prediction.get("extra_time_probability"),
 
             "Penalties %":
-                prediction.get(
-                    "penalty_probability"
-                ),
+                prediction.get("penalty_probability"),
 
             "Final Winner":
                 map_result(
-                    prediction.get(
-                        "final_winner"
-                    ),
+                    prediction.get("final_winner"),
                     home,
                     away
                 ),
 
             "Confidence":
-                prediction.get(
-                    "confidence"
-                ),
+                prediction.get("confidence"),
 
             "Risk":
-                prediction.get(
-                    "risk_level"
-                ),
+                prediction.get("risk_level"),
 
             "Points":
                 points,
@@ -699,20 +719,23 @@ def render_match(match):
                 status,
 
             "Reasoning":
-                prediction.get(
-                    "reasoning"
-                )
+                prediction.get("reasoning")
         })
 
 
-    prediction_df = pd.DataFrame(
-        rows
-    )
+    prediction_df = pd.DataFrame(rows)
 
     def highlight_match_winner(row):
         if row["Status"] == "🥇 Match Winner":
-            return ["font-weight: bold" for _ in row]
-        return ["" for _ in row]
+            return [
+                "font-weight: bold"
+                for _ in row
+            ]
+
+        return [
+            ""
+            for _ in row
+        ]
 
     styled_prediction_df = prediction_df.style.apply(
         highlight_match_winner,
@@ -732,46 +755,32 @@ def render_match(match):
 # UPCOMING MATCHES
 # --------------------------------------------------
 
-st.markdown(
-    "## ⏳ Upcoming / Pending Matches"
-)
+st.markdown("## ⏳ Upcoming / Pending Matches")
 
 if pending_matches:
 
     for match in pending_matches:
-
-        render_match(
-            match
-        )
+        render_match(match)
 
 else:
 
-    st.success(
-        "No pending matches."
-    )
+    st.success("No pending matches.")
 
 
 # --------------------------------------------------
 # COMPLETED MATCHES
 # --------------------------------------------------
 
-st.markdown(
-    "## ✅ Completed Matches"
-)
+st.markdown("## ✅ Completed Matches")
 
 if completed_matches:
 
     for match in completed_matches:
-
-        render_match(
-            match
-        )
+        render_match(match)
 
 else:
 
-    st.info(
-        "No completed matches yet."
-    )
+    st.info("No completed matches yet.")
 
 
 # --------------------------------------------------
@@ -780,10 +789,6 @@ else:
 
 if st.session_state.admin_authenticated:
 
-    with st.expander(
-        "Raw Data"
-    ):
+    with st.expander("Raw Data"):
 
-        st.json(
-            db
-        )
+        st.json(db)

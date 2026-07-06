@@ -486,17 +486,20 @@
       "away": "Spain",
       "model": "GPT",
       "prediction": {
-        "score_90min": "1-1",
         "result_90min": "draw",
-        "extra_time_probability": 46,
-        "penalty_probability": 32,
+        "score_90min": "1-1",
+        "home_win_probability": 30,
+        "draw_probability": 31,
+        "away_win_probability": 39,
+        "extra_time_probability": 31,
+        "penalty_probability": 14,
         "final_winner": "away",
-        "confidence": 67,
-        "risk_level": "medium",
-        "reasoning": "Spain's stronger tournament form and defensive control are balanced by Portugal's knockout experience and attacking quality. A tight draw is the most plausible 90-minute outcome, with Spain slightly more likely to advance."
+        "confidence": 56,
+        "risk_level": "high",
+        "reasoning": "Spain\u2019s midfield control, defensive form, and wide attacking threat give them a narrow edge, but Portugal\u2019s squad depth and knockout experience make this very tight. The matchup points to a conservative, low-margin game with a realistic extra-time scenario. Spain are slightly more likely to create the cleaner chances and advance."
       },
       "actual": null,
-      "created_at": "2026-07-06T16:39:54.477889"
+      "created_at": "2026-07-06T19:16:37.079038"
     },
     {
       "match": "Portugal vs Spain",
@@ -504,17 +507,20 @@
       "away": "Spain",
       "model": "Claude",
       "prediction": {
-        "score_90min": "1-2",
         "result_90min": "away",
-        "extra_time_probability": 20,
-        "penalty_probability": 10,
+        "score_90min": "1-2",
+        "home_win_probability": 28,
+        "draw_probability": 27,
+        "away_win_probability": 45,
+        "extra_time_probability": 25,
+        "penalty_probability": 12,
         "final_winner": "away",
-        "confidence": 72,
+        "confidence": 68,
         "risk_level": "medium",
-        "reasoning": "Spain arrive unbeaten with five clean sheets and superior control via Pedri, Rodri and Oyarzabal, while Portugal have looked shakier and needed a stoppage-time winner past Croatia. Ronaldo's threat and Portugal's set-piece quality should get them on the scoresheet, but Spain's defensive discipline and superior recent form should be enough to edge this Iberian derby."
+        "reasoning": "Spain arrive unbeaten with five clean sheets and superior control through Pedri, Rodri and Oyarzabal, while Portugal have looked shakier, needing a stoppage-time winner to escape the previous round. Ronaldo's threat and Portugal's set-piece quality should get them on the scoresheet, but Spain's defensive discipline and better recent form should be enough to edge this Iberian derby."
       },
       "actual": null,
-      "created_at": "2026-07-06T16:40:36.409383"
+      "created_at": "2026-07-06T19:16:53.862729"
     },
     {
       "match": "Portugal vs Spain",
@@ -522,17 +528,20 @@
       "away": "Spain",
       "model": "Gemini",
       "prediction": {
-        "score_90min": "1-1",
         "result_90min": "draw",
-        "extra_time_probability": 60,
-        "penalty_probability": 40,
+        "score_90min": "1-1",
+        "home_win_probability": 30,
+        "draw_probability": 40,
+        "away_win_probability": 30,
+        "extra_time_probability": 40,
+        "penalty_probability": 25,
         "final_winner": "home",
-        "confidence": 65,
+        "confidence": 60,
         "risk_level": "high",
-        "reasoning": "This is a tactical stalemate between two evenly matched Iberian sides who prioritize ball retention and defensive structure. Portugal\u2019s slight edge in individual playmaking momentum is expected to prove decisive in an eventual penalty shootout."
+        "reasoning": "This is a tactical stalemate between two evenly matched teams who prioritize defensive discipline and controlled possession. Portugal possesses a slight edge in individual creativity and penalty shootout pedigree that should prove decisive in a high-pressure environment. The matchup is expected to be cagey, with both sides minimizing risks until extra time or penalties."
       },
       "actual": null,
-      "created_at": "2026-07-06T16:41:01.472414"
+      "created_at": "2026-07-06T19:17:44.030067"
     },
     {
       "match": "Portugal vs Spain",
@@ -540,17 +549,20 @@
       "away": "Spain",
       "model": "Codex",
       "prediction": {
-        "score_90min": "0-1",
         "result_90min": "away",
-        "extra_time_probability": 0,
-        "penalty_probability": 0,
+        "score_90min": "0-1",
+        "home_win_probability": 27,
+        "draw_probability": 31,
+        "away_win_probability": 42,
+        "extra_time_probability": 31,
+        "penalty_probability": 16,
         "final_winner": "away",
-        "confidence": 57,
+        "confidence": 58,
         "risk_level": "high",
-        "reasoning": "pain's midfield control and current tournament rhythm give them a narrow edge, even with some attacking injury doubts. Portugal's full squad and transition threat should keep it extremely tight, but a conservative 0-1 Spain win is the most realistic 90-minute outcome"
+        "reasoning": "Spain enter with better tournament rhythm, stronger midfield control, and a cleaner defensive profile, while Portugal have a full squad but have looked less stable. The matchup points to a cautious, low-margin game where Spain are slightly likelier to create the decisive chance."
       },
       "actual": null,
-      "created_at": "2026-07-06T16:41:01.472414"
+      "created_at": "2026-07-06T19:18:15.223252"
     },
     {
       "match": "Portugal vs Spain",
@@ -558,17 +570,20 @@
       "away": "Spain",
       "model": "Tsoofit",
       "prediction": {
-        "score_90min": "0-1",
         "result_90min": "away",
-        "extra_time_probability": 0,
-        "penalty_probability": 0,
+        "score_90min": "1-2",
+        "home_win_probability": 27,
+        "draw_probability": 31,
+        "away_win_probability": 42,
+        "extra_time_probability": 31,
+        "penalty_probability": 16,
         "final_winner": "away",
-        "confidence": 65,
+        "confidence": 58,
         "risk_level": "high",
-        "reasoning": "Spain is better and CR sucks"
+        "reasoning": "Spain enter with better tournament rhythm, CR7 suck."
       },
       "actual": null,
-      "created_at": "2026-07-06T16:41:01.472414"
+      "created_at": "2026-07-06T19:19:51.518099"
     },
     {
       "match": "USA vs Belgium",
@@ -576,17 +591,20 @@
       "away": "Belgium",
       "model": "GPT",
       "prediction": {
-        "score_90min": "1-1",
         "result_90min": "draw",
-        "extra_time_probability": 44,
-        "penalty_probability": 31,
-        "final_winner": "away",
-        "confidence": 62,
+        "score_90min": "1-1",
+        "home_win_probability": 35,
+        "draw_probability": 30,
+        "away_win_probability": 35,
+        "extra_time_probability": 30,
+        "penalty_probability": 15,
+        "final_winner": "home",
+        "confidence": 52,
         "risk_level": "high",
-        "reasoning": "USA's athleticism and home-tournament intensity can disrupt Belgium, but Belgium retain greater individual quality and experience in decisive matches. A balanced 90 minutes is plausible, with Belgium narrowly more likely to advance after regulation."
+        "reasoning": "Belgium have slightly higher baseline squad strength, but the USA\u2019s home advantage and Balogun\u2019s availability make this close. Both teams have enough attacking quality to score, but knockout caution points to a tight 90 minutes. The USA have a marginal edge to advance through extra time or penalties."
       },
       "actual": null,
-      "created_at": "2026-07-06T16:54:29.061808"
+      "created_at": "2026-07-06T19:20:49.516056"
     },
     {
       "match": "USA vs Belgium",
@@ -594,17 +612,20 @@
       "away": "Belgium",
       "model": "Claude",
       "prediction": {
-        "score_90min": "1-1",
         "result_90min": "draw",
-        "extra_time_probability": 55,
-        "penalty_probability": 25,
+        "score_90min": "1-1",
+        "home_win_probability": 32,
+        "draw_probability": 34,
+        "away_win_probability": 34,
+        "extra_time_probability": 45,
+        "penalty_probability": 22,
         "final_winner": "home",
-        "confidence": 55,
+        "confidence": 54,
         "risk_level": "high",
-        "reasoning": "Belogun's reinstatement gives USA their full attacking threat and home crowd support at Lumen Field, while Belgium's aging squad has looked shaky despite De Bruyne and Lukaku's quality. Expect an evenly matched game with both sides cancelling each other out through 90 minutes, before USA's home advantage and fresher legs tip it their way in extra time."
+        "reasoning": "Balogun's reinstatement restores USA's full attacking edge and pairs with home crowd support at Lumen Field, while Belgium's aging squad has looked tired and vulnerable despite De Bruyne and Lukaku's individual quality. Both sides should cancel each other out through 90 minutes, with USA's fresher legs and home advantage tipping a tight game their way in extra time."
       },
       "actual": null,
-      "created_at": "2026-07-06T16:55:39.004698"
+      "created_at": "2026-07-06T19:22:00.679259"
     },
     {
       "match": "USA vs Belgium",
@@ -612,17 +633,20 @@
       "away": "Belgium",
       "model": "Gemini",
       "prediction": {
-        "score_90min": "1-2",
         "result_90min": "away",
-        "extra_time_probability": 15,
-        "penalty_probability": 5,
+        "score_90min": "1-2",
+        "home_win_probability": 30,
+        "draw_probability": 30,
+        "away_win_probability": 40,
+        "extra_time_probability": 30,
+        "penalty_probability": 15,
         "final_winner": "away",
-        "confidence": 75,
+        "confidence": 65,
         "risk_level": "medium",
-        "reasoning": "Belgium\u2019s superior individual quality and experience in high-pressure knockout matches allow them to break down the USA's defensive shape. While the home crowd will provide significant momentum, Belgium's clinical attacking efficiency is expected to secure the victory in regulation."
+        "reasoning": "Belgium's superior individual quality and extensive experience in high-pressure knockout fixtures give them a tactical edge over the U.S. side. While the U.S. benefits from home-field intensity, Belgium's clinical attacking efficiency is expected to prevail in a tightly contested match."
       },
       "actual": null,
-      "created_at": "2026-07-06T16:56:04.765115"
+      "created_at": "2026-07-06T19:24:50.594315"
     },
     {
       "match": "USA vs Belgium",
@@ -630,17 +654,20 @@
       "away": "Belgium",
       "model": "Codex",
       "prediction": {
-        "score_90min": "1-1",
         "result_90min": "draw",
-        "extra_time_probability": 100,
-        "penalty_probability": 52,
+        "score_90min": "1-1",
+        "home_win_probability": 32,
+        "draw_probability": 34,
+        "away_win_probability": 34,
+        "extra_time_probability": 34,
+        "penalty_probability": 18,
         "final_winner": "away",
-        "confidence": 53,
+        "confidence": 52,
         "risk_level": "high",
-        "reasoning": "The USA's home advantage and Balogun's availability raise their attacking threat, but Belgium still carry more technical quality and tournament experience in a tight knockout setting. A cautious 1-1 after 90 minutes is most likely, with Belgium slightly likelier to progress if it goes long."
+        "reasoning": "The USA have home advantage and Balogun available, giving them enough pace and penalty-box threat to trouble Belgium. Belgium still have the cleaner technical midfield and more knockout experience, but their edge is narrow enough that a 90-minute draw is the most realistic outcome."
       },
       "actual": null,
-      "created_at": "2026-07-06T16:56:19.979982"
+      "created_at": "2026-07-06T19:25:11.616769"
     },
     {
       "match": "USA vs Belgium",
@@ -648,17 +675,20 @@
       "away": "Belgium",
       "model": "Tsoofit",
       "prediction": {
-        "score_90min": "2-1",
         "result_90min": "home",
-        "extra_time_probability": 0,
-        "penalty_probability": 0,
+        "score_90min": "2-1",
+        "home_win_probability": 62,
+        "draw_probability": 19,
+        "away_win_probability": 19,
+        "extra_time_probability": 19,
+        "penalty_probability": 18,
         "final_winner": "home",
-        "confidence": 53,
+        "confidence": 62,
         "risk_level": "high",
-        "reasoning": "The USA's home advantage and Balogun's availability raise their attacking threat, but USA still carry higher perfomance in tournament so far."
+        "reasoning": "The USA have home advantage."
       },
       "actual": null,
-      "created_at": "2026-07-06T16:56:19.979982"
+      "created_at": "2026-07-06T19:25:11.616769"
     }
   ]
 }
