@@ -749,6 +749,216 @@
         "went_penalties": false
       },
       "created_at": "2026-07-06T19:25:11.616769"
+    },
+    {
+      "match": "Egypt vs Argentina",
+      "home": "Egypt",
+      "away": "Argentina",
+      "model": "GPT",
+      "prediction": {
+        "result_90min": "away",
+        "score_90min": "0-2",
+        "home_win_probability": 17,
+        "draw_probability": 26,
+        "away_win_probability": 57,
+        "extra_time_probability": 26,
+        "penalty_probability": 10,
+        "final_winner": "away",
+        "confidence": 68,
+        "risk_level": "medium",
+        "reasoning": "Argentina are stronger in ranking, squad depth, defensive stability, and knockout experience, while Egypt arrive with momentum but fatigue and Salah fitness concerns. Egypt’s compact block and transition threat can keep it close, but Argentina should control territory and create the cleaner chances. The most likely outcome is Argentina advancing in 90 minutes."
+      },
+      "actual": null,
+      "created_at": "2026-07-07T09:03:37.758510"
+    },
+    {
+      "match": "Egypt vs Argentina",
+      "home": "Egypt",
+      "away": "Argentina",
+      "model": "Claude",
+      "prediction": {
+        "result_90min": "away",
+        "score_90min": "0-2",
+        "home_win_probability": 9,
+        "draw_probability": 19,
+        "away_win_probability": 72,
+        "extra_time_probability": 19,
+        "penalty_probability": 6,
+        "final_winner": "away",
+        "confidence": 80,
+        "risk_level": "low",
+        "reasoning": "Argentina are overwhelming favorites (around -290 to -310 on the moneyline, 72% on Kalshi) with Messi in career-best form (7 goals) and a squad far deeper than Egypt's, who rank near the bottom of the remaining 16 teams in xG and shot quality. Egypt have yet to keep a clean sheet this tournament and have scored no more than once in any match, making a clear Argentina win to nil the most likely path to the quarter-finals."
+      },
+      "actual": null,
+      "created_at": "2026-07-07T09:03:55.354059"
+    },
+    {
+      "match": "Egypt vs Argentina",
+      "home": "Egypt",
+      "away": "Argentina",
+      "model": "Gemini",
+      "prediction": {
+        "result_90min": "away",
+        "score_90min": "1-2",
+        "home_win_probability": 15,
+        "draw_probability": 25,
+        "away_win_probability": 60,
+        "extra_time_probability": 25,
+        "penalty_probability": 10,
+        "final_winner": "away",
+        "confidence": 75,
+        "risk_level": "medium",
+        "reasoning": "Argentina possesses superior squad depth and elite attacking options led by Lionel Messi, giving them the edge despite a recent scare against Cape Verde. Egypt will rely heavily on a compact defensive block and Mohamed Salah's transitional pace but lack the depth to sustain 90 minutes of elite pressure. Expect a tight knockout battle where the reigning champions' experience ultimately proves decisive."
+      },
+      "actual": null,
+      "created_at": "2026-07-07T17:11:26.605028"
+    },
+    {
+      "match": "Egypt vs Argentina",
+      "home": "Egypt",
+      "away": "Argentina",
+      "model": "Codex",
+      "prediction": {
+        "result_90min": "draw",
+        "score_90min": "1-1",
+        "home_win_probability": 17,
+        "draw_probability": 28,
+        "away_win_probability": 55,
+        "extra_time_probability": 28,
+        "penalty_probability": 13,
+        "final_winner": "away",
+        "confidence": 62,
+        "risk_level": "medium",
+        "reasoning": "Argentina have the stronger overall squad, higher team-strength profile, and Messi is in exceptional tournament form, but their recent extra-time scare exposed defensive vulnerability and fatigue. Egypt\u2019s best route is a compact block with Salah and Marmoush attacking transitions, making a tight 90 minutes plausible. Argentina\u2019s depth and knockout experience make them more likely to find the decisive edge after 90 minutes if needed."
+      },
+      "actual": null,
+      "created_at": "2026-07-07T17:11:58.631114"
+    },
+       {
+      "match": "Egypt vs Argentina",
+      "home": "Egypt",
+      "away": "Argentina",
+      "model": "Tsoofit",
+      "prediction": {
+        "result_90min": "away",
+        "score_90min": "0-2",
+        "home_win_probability": 5,
+        "draw_probability": 20,
+        "away_win_probability": 75,
+        "extra_time_probability": 20,
+        "penalty_probability": 10,
+        "final_winner": "away",
+        "confidence": 90,
+        "risk_level": "medium",
+        "reasoning": "Argentina have the stronger overall squad."
+      },
+      "actual": null,
+      "created_at": "2026-07-07T17:11:58.631114"
+    },
+    {
+      "match": "Switzerland vs Colombia",
+      "home": "Switzerland",
+      "away": "Colombia",
+      "model": "GPT",
+      "prediction": {
+        "result_90min": "away",
+        "score_90min": "1-2",
+        "home_win_probability": 31,
+        "draw_probability": 29,
+        "away_win_probability": 40,
+        "extra_time_probability": 29,
+        "penalty_probability": 13,
+        "final_winner": "away",
+        "confidence": 58,
+        "risk_level": "high",
+        "reasoning": "Colombia\u2019s unbeaten tournament form, defensive stability, and tactical flexibility give them a narrow edge. Switzerland are organized and dangerous, but reported fitness concerns around key attackers reduce their margin. This profiles as a tight knockout match, with Colombia slightly more likely to create decisive transition chances."
+      },
+      "actual": null,
+      "created_at": "2026-07-07T17:13:01.459185"
+    },
+    {
+      "match": "Switzerland vs Colombia",
+      "home": "Switzerland",
+      "away": "Colombia",
+      "model": "Claude",
+      "prediction": {
+        "result_90min": "away",
+        "score_90min": "0-1",
+        "home_win_probability": 28,
+        "draw_probability": 30,
+        "away_win_probability": 42,
+        "extra_time_probability": 30,
+        "penalty_probability": 14,
+        "final_winner": "away",
+        "confidence": 58,
+        "risk_level": "medium",
+        "reasoning": "Colombia have conceded just once all tournament and possess greater individual quality via Luis Diaz and James Rodriguez, giving them a narrow edge per betting markets and the Opta model. Switzerland's disciplined defensive shape and unbeaten run make this a tight, low-scoring contest that could easily stretch to extra time, but Colombia's sharper attacking threat should be enough to find a single breakthrough."
+      },
+      "actual": null,
+      "created_at": "2026-07-07T17:13:22.605413"
+    },
+    {
+      "match": "Switzerland vs Colombia",
+      "home": "Switzerland",
+      "away": "Colombia",
+      "model": "Gemini",
+      "prediction": {
+        "result_90min": "away",
+        "score_90min": "0-1",
+        "home_win_probability": 25,
+        "draw_probability": 30,
+        "away_win_probability": 45,
+        "extra_time_probability": 30,
+        "penalty_probability": 15,
+        "final_winner": "away",
+        "confidence": 65,
+        "risk_level": "medium",
+        "reasoning": "Colombia enters the match in excellent form, driven by Luis D\u00edaz's attacking threat and a stellar defense that has kept three clean sheets in four games. Switzerland's compact and disciplined organization under Murat Yakin will likely keep the scoreline tight and low-scoring. However, Colombia's superior high-volume chance creation and squad depth should provide the decisive breakthrough."
+      },
+      "actual": null,
+      "created_at": "2026-07-07T17:15:14.000009"
+    },
+    {
+      "match": "Switzerland vs Colombia",
+      "home": "Switzerland",
+      "away": "Colombia",
+      "model": "Codex",
+      "prediction": {
+        "result_90min": "draw",
+        "score_90min": "1-1",
+        "home_win_probability": 30,
+        "draw_probability": 31,
+        "away_win_probability": 39,
+        "extra_time_probability": 31,
+        "penalty_probability": 14,
+        "final_winner": "away",
+        "confidence": 55,
+        "risk_level": "high",
+        "reasoning": "Both teams arrive unbeaten and defensively stable, but Colombia have shown slightly greater attacking variety and control against stronger opposition. Switzerland\u2019s rest advantage and structure under Xhaka make a low-margin 90 minutes likely. Colombia\u2019s deeper transition threat and current tournament momentum give them the narrow edge to advance after extra time or penalties."
+      },
+      "actual": null,
+      "created_at": "2026-07-07T17:15:37.042569"
+    },
+        {
+      "match": "Switzerland vs Colombia",
+      "home": "Switzerland",
+      "away": "Colombia",
+      "model": "Tsoofit",
+      "prediction": {
+        "result_90min": "away",
+        "score_90min": "1-2",
+        "home_win_probability": 35,
+        "draw_probability": 20,
+        "away_win_probability": 45,
+        "extra_time_probability": 20,
+        "penalty_probability": 10,
+        "final_winner": "away",
+        "confidence": 55,
+        "risk_level": "high",
+        "reasoning": "Both teams arrive unbeaten and defensively stable."
+      },
+      "actual": null,
+      "created_at": "2026-07-07T17:15:37.042569"
     }
   ]
 }
