@@ -766,9 +766,15 @@
         "final_winner": "away",
         "confidence": 68,
         "risk_level": "medium",
-        "reasoning": "Argentina are stronger in ranking, squad depth, defensive stability, and knockout experience, while Egypt arrive with momentum but fatigue and Salah fitness concerns. Egypt’s compact block and transition threat can keep it close, but Argentina should control territory and create the cleaner chances. The most likely outcome is Argentina advancing in 90 minutes."
+        "reasoning": "Argentina are stronger in ranking, squad depth, defensive stability, and knockout experience, while Egypt arrive with momentum but fatigue and Salah fitness concerns. Egypt\u2019s compact block and transition threat can keep it close, but Argentina should control territory and create the cleaner chances. The most likely outcome is Argentina advancing in 90 minutes."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "2-3",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-07T09:03:37.758510"
     },
     {
@@ -789,7 +795,13 @@
         "risk_level": "low",
         "reasoning": "Argentina are overwhelming favorites (around -290 to -310 on the moneyline, 72% on Kalshi) with Messi in career-best form (7 goals) and a squad far deeper than Egypt's, who rank near the bottom of the remaining 16 teams in xG and shot quality. Egypt have yet to keep a clean sheet this tournament and have scored no more than once in any match, making a clear Argentina win to nil the most likely path to the quarter-finals."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "2-3",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-07T09:03:55.354059"
     },
     {
@@ -810,7 +822,13 @@
         "risk_level": "medium",
         "reasoning": "Argentina possesses superior squad depth and elite attacking options led by Lionel Messi, giving them the edge despite a recent scare against Cape Verde. Egypt will rely heavily on a compact defensive block and Mohamed Salah's transitional pace but lack the depth to sustain 90 minutes of elite pressure. Expect a tight knockout battle where the reigning champions' experience ultimately proves decisive."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "2-3",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-07T17:11:26.605028"
     },
     {
@@ -831,10 +849,16 @@
         "risk_level": "medium",
         "reasoning": "Argentina have the stronger overall squad, higher team-strength profile, and Messi is in exceptional tournament form, but their recent extra-time scare exposed defensive vulnerability and fatigue. Egypt\u2019s best route is a compact block with Salah and Marmoush attacking transitions, making a tight 90 minutes plausible. Argentina\u2019s depth and knockout experience make them more likely to find the decisive edge after 90 minutes if needed."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "2-3",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-07T17:11:58.631114"
     },
-       {
+    {
       "match": "Egypt vs Argentina",
       "home": "Egypt",
       "away": "Argentina",
@@ -852,7 +876,13 @@
         "risk_level": "medium",
         "reasoning": "Argentina have the stronger overall squad."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "2-3",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-07T17:11:58.631114"
     },
     {
@@ -939,7 +969,7 @@
       "actual": null,
       "created_at": "2026-07-07T17:15:37.042569"
     },
-        {
+    {
       "match": "Switzerland vs Colombia",
       "home": "Switzerland",
       "away": "Colombia",
