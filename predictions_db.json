@@ -633,7 +633,13 @@
         "risk_level": "high",
         "reasoning": "Belgium have slightly higher baseline squad strength, but the USA\u2019s home advantage and Balogun\u2019s availability make this close. Both teams have enough attacking quality to score, but knockout caution points to a tight 90 minutes. The USA have a marginal edge to advance through extra time or penalties."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-4",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-06T19:20:49.516056"
     },
     {
@@ -654,7 +660,13 @@
         "risk_level": "high",
         "reasoning": "Balogun's reinstatement restores USA's full attacking edge and pairs with home crowd support at Lumen Field, while Belgium's aging squad has looked tired and vulnerable despite De Bruyne and Lukaku's individual quality. Both sides should cancel each other out through 90 minutes, with USA's fresher legs and home advantage tipping a tight game their way in extra time."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-4",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-06T19:22:00.679259"
     },
     {
@@ -675,7 +687,13 @@
         "risk_level": "medium",
         "reasoning": "Belgium's superior individual quality and extensive experience in high-pressure knockout fixtures give them a tactical edge over the U.S. side. While the U.S. benefits from home-field intensity, Belgium's clinical attacking efficiency is expected to prevail in a tightly contested match."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-4",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-06T19:24:50.594315"
     },
     {
@@ -696,7 +714,13 @@
         "risk_level": "high",
         "reasoning": "The USA have home advantage and Balogun available, giving them enough pace and penalty-box threat to trouble Belgium. Belgium still have the cleaner technical midfield and more knockout experience, but their edge is narrow enough that a 90-minute draw is the most realistic outcome."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-4",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-06T19:25:11.616769"
     },
     {
@@ -717,7 +741,13 @@
         "risk_level": "high",
         "reasoning": "The USA have home advantage."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-4",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-06T19:25:11.616769"
     }
   ]
