@@ -8,10 +8,6 @@ from datetime import datetime
 
 DATA_FILE = "predictions_db.json"
 
-# Scoring v2 starts from this date onward.
-# Predictions created before this date continue using v1.
-SCORING_V2_START_DATE = "2026-07-06"
-
 POINTS_V1 = {
     "final_winner": 5,
     "result_90min": 3,
@@ -20,18 +16,7 @@ POINTS_V1 = {
     "penalties": 2,
 }
 
-POINTS_V2 = {
-    "final_winner": 4,
-    "result_90min": 3,
-    "exact_score": 5,
-    "extra_time": 2,
-    "penalties": 2,
-    "probability_calibration": 4,
-}
-
 MAX_POINTS_V1 = sum(POINTS_V1.values())
-MAX_POINTS_V2 = sum(POINTS_V2.values())
-
 
 # --------------------------------------------------
 # DATA
@@ -141,7 +126,6 @@ def match_has_actual(db, match_name):
         )
     )
 
-
 def parse_created_at(item):
     raw = item.get("created_at")
 
@@ -152,16 +136,6 @@ def parse_created_at(item):
         return datetime.fromisoformat(raw).date()
     except Exception:
         return None
-
-
-def use_scoring_v2(item):
-    created_date = parse_created_at(item)
-
-    if created_date is None:
-        return False
-
-    return created_date >= datetime.fromisoformat(SCORING_V2_START_DATE).date()
-
 
 # --------------------------------------------------
 # SCORING
@@ -221,38 +195,10 @@ def score_prediction_v1(prediction, actual):
 
     return score
 
-
-def score_prediction_v2(prediction, actual):
-    score = 0
-
-    if prediction.get("final_winner") == actual.get("final_winner"):
-        score += POINTS_V2["final_winner"]
-
-    if prediction.get("result_90min") == actual.get("result_90min"):
-        score += POINTS_V2["result_90min"]
-
-    if prediction.get("score_90min") == actual.get("score_90min"):
-        score += POINTS_V2["exact_score"]
-
-    if predicted_extra_time(prediction) == actual.get("went_extra_time"):
-        score += POINTS_V2["extra_time"]
-
-    if predicted_penalties(prediction) == actual.get("went_penalties"):
-        score += POINTS_V2["penalties"]
-
-    score += probability_points(prediction, actual)
-
-    return score
-
-
 def score_prediction_for_item(item, actual):
     prediction = item.get("prediction", {})
 
-    if use_scoring_v2(item):
-        return score_prediction_v2(prediction, actual), MAX_POINTS_V2, "v2"
-
     return score_prediction_v1(prediction, actual), MAX_POINTS_V1, "v1"
-
 
 def compute_leaderboard(db):
     stats = {}
@@ -273,8 +219,6 @@ def compute_leaderboard(db):
                 "Points": 0,
                 "Max Points": 0,
                 "Matches": 0,
-                "V1 Matches": 0,
-                "V2 Matches": 0,
                 "Success Rate": 0.0
             }
 
@@ -286,11 +230,6 @@ def compute_leaderboard(db):
         stats[model]["Points"] += earned
         stats[model]["Max Points"] += max_points
         stats[model]["Matches"] += 1
-
-        if scoring_version == "v2":
-            stats[model]["V2 Matches"] += 1
-        else:
-            stats[model]["V1 Matches"] += 1
 
     for model in stats:
         stats[model]["Success Rate"] = round(
@@ -335,7 +274,6 @@ st.title("⚽ World Cup Knockout Prediction League: " \
 
 st.caption(
     "AI models vs human prediction benchmark. "
-    f"Scoring v2 applies to predictions created from {SCORING_V2_START_DATE} onward."
 )
 
 db = load_db()
@@ -509,8 +447,6 @@ if not leaderboard_df.empty:
                 "Points",
                 "Max Points",
                 "Matches",
-                "V1 Matches",
-                "V2 Matches",
                 "Success Rate"
             ]
         )
