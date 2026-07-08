@@ -1104,6 +1104,27 @@
       "actual": null,
       "created_at": "2026-07-08T19:54:13.861497"
     },
+      {
+      "match": "France vs Morocco",
+      "home": "France",
+      "away": "Morocco",
+      "model": "Tsoofit",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "2-0",
+        "home_win_probability": 80,
+        "draw_probability": 15,
+        "away_win_probability": 5,
+        "extra_time_probability": 15,
+        "penalty_probability": 3,
+        "final_winner": "home",
+        "confidence": 80,
+        "risk_level": "medium",
+        "reasoning": "Morocco best player is injured, anf France are the best team in the world, so France will win."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T20:11:22.579321"
+    },
     {
       "match": "Spain vs Belgium",
       "home": "Spain",
@@ -1187,6 +1208,27 @@
       },
       "actual": null,
       "created_at": "2026-07-08T20:04:38.140155"
+    },
+      {
+      "match": "Spain vs Belgium",
+      "home": "Spain",
+      "away": "Belgium",
+      "model": "Tsoofit",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "1-0",
+        "home_win_probability": 70,
+        "draw_probability": 15,
+        "away_win_probability": 15,
+        "extra_time_probability": 15,
+        "penalty_probability": 5,
+        "final_winner": "home",
+        "confidence": 80,
+        "risk_level": "medium",
+        "reasoning": "Spain didn't concede a goal in the knockout stages."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T20:11:22.579321"
     },
     {
       "match": "Norway vs England",
@@ -1272,6 +1314,27 @@
       "actual": null,
       "created_at": "2026-07-08T20:08:11.969856"
     },
+      {
+      "match": "Norway vs England",
+      "home": "Norway",
+      "away": "England",
+      "model": "Tsoofit",
+      "prediction": {
+        "result_90min": "away",
+        "score_90min": "2-1",
+        "home_win_probability": 20,
+        "draw_probability": 15,
+        "away_win_probability": 65,
+        "extra_time_probability": 15,
+        "penalty_probability": 5,
+        "final_winner": "away",
+        "confidence": 75,
+        "risk_level": "medium",
+        "reasoning": "England is stronger."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T20:11:22.579321"
+    },
     {
       "match": "Argentina vs Switzerland",
       "home": "Argentina",
@@ -1352,6 +1415,27 @@
         "confidence": 63,
         "risk_level": "medium",
         "reasoning": "Argentina have the stronger attacking ceiling and Messi is in decisive form, but their comeback against Egypt also exposed defensive fragility. Switzerland's disciplined block and Kobel's form make this likely to be low-scoring, though their 120-minute shootout win over Colombia and Manzambi's absence reduce their attacking upside. Argentina are better equipped to find one decisive moment before extra time."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T20:11:22.579321"
+    },
+    {
+      "match": "Argentina vs Switzerland",
+      "home": "Argentina",
+      "away": "Switzerland",
+      "model": "Tsoofit",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "2-1",
+        "home_win_probability": 70,
+        "draw_probability": 10,
+        "away_win_probability": 20,
+        "extra_time_probability": 10,
+        "penalty_probability": 5,
+        "final_winner": "home",
+        "confidence": 80,
+        "risk_level": "medium",
+        "reasoning": "Messi is God."
       },
       "actual": null,
       "created_at": "2026-07-08T20:11:22.579321"
