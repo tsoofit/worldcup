@@ -903,7 +903,13 @@
         "risk_level": "high",
         "reasoning": "Colombia\u2019s unbeaten tournament form, defensive stability, and tactical flexibility give them a narrow edge. Switzerland are organized and dangerous, but reported fitness concerns around key attackers reduce their margin. This profiles as a tight knockout match, with Colombia slightly more likely to create decisive transition chances."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "0-0",
+        "result_90min": "draw",
+        "final_winner": "home",
+        "went_extra_time": true,
+        "went_penalties": true
+      },
       "created_at": "2026-07-07T17:13:01.459185"
     },
     {
@@ -924,7 +930,13 @@
         "risk_level": "medium",
         "reasoning": "Colombia have conceded just once all tournament and possess greater individual quality via Luis Diaz and James Rodriguez, giving them a narrow edge per betting markets and the Opta model. Switzerland's disciplined defensive shape and unbeaten run make this a tight, low-scoring contest that could easily stretch to extra time, but Colombia's sharper attacking threat should be enough to find a single breakthrough."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "0-0",
+        "result_90min": "draw",
+        "final_winner": "home",
+        "went_extra_time": true,
+        "went_penalties": true
+      },
       "created_at": "2026-07-07T17:13:22.605413"
     },
     {
@@ -945,7 +957,13 @@
         "risk_level": "medium",
         "reasoning": "Colombia enters the match in excellent form, driven by Luis D\u00edaz's attacking threat and a stellar defense that has kept three clean sheets in four games. Switzerland's compact and disciplined organization under Murat Yakin will likely keep the scoreline tight and low-scoring. However, Colombia's superior high-volume chance creation and squad depth should provide the decisive breakthrough."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "0-0",
+        "result_90min": "draw",
+        "final_winner": "home",
+        "went_extra_time": true,
+        "went_penalties": true
+      },
       "created_at": "2026-07-07T17:15:14.000009"
     },
     {
@@ -966,7 +984,13 @@
         "risk_level": "high",
         "reasoning": "Both teams arrive unbeaten and defensively stable, but Colombia have shown slightly greater attacking variety and control against stronger opposition. Switzerland\u2019s rest advantage and structure under Xhaka make a low-margin 90 minutes likely. Colombia\u2019s deeper transition threat and current tournament momentum give them the narrow edge to advance after extra time or penalties."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "0-0",
+        "result_90min": "draw",
+        "final_winner": "home",
+        "went_extra_time": true,
+        "went_penalties": true
+      },
       "created_at": "2026-07-07T17:15:37.042569"
     },
     {
@@ -987,7 +1011,13 @@
         "risk_level": "high",
         "reasoning": "Both teams arrive unbeaten and defensively stable."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "0-0",
+        "result_90min": "draw",
+        "final_winner": "home",
+        "went_extra_time": true,
+        "went_penalties": true
+      },
       "created_at": "2026-07-07T17:15:37.042569"
     }
   ]
