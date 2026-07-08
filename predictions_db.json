@@ -1019,6 +1019,342 @@
         "went_penalties": true
       },
       "created_at": "2026-07-07T17:15:37.042569"
+    },
+    {
+      "match": "France vs Morocco",
+      "home": "France",
+      "away": "Morocco",
+      "model": "GPT",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "2-1",
+        "home_win_probability": 49,
+        "draw_probability": 28,
+        "away_win_probability": 23,
+        "extra_time_probability": 28,
+        "penalty_probability": 11,
+        "final_winner": "home",
+        "confidence": 62,
+        "risk_level": "medium",
+        "reasoning": "France have the stronger attacking ceiling, elite knockout experience, and Mbappe\u2019s form gives them the clearest match-winning threat. Morocco are organized, confident, and dangerous in transition, but injury uncertainty around Saibari slightly weakens their attacking balance. This should be tight, but France are more likely to create the decisive high-quality chances."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T19:38:54.018738"
+    },
+    {
+      "match": "France vs Morocco",
+      "home": "France",
+      "away": "Morocco",
+      "model": "Claude",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "2-0",
+        "home_win_probability": 62,
+        "draw_probability": 25,
+        "away_win_probability": 13,
+        "extra_time_probability": 25,
+        "penalty_probability": 10,
+        "final_winner": "home",
+        "confidence": 76,
+        "risk_level": "low",
+        "reasoning": "France have won all six matches and never lost to Morocco in six meetings, with Mbappe (19 World Cup goals) leading the tournament's most prolific attack against a Morocco side missing top scorer Saibari to a hamstring injury. Morocco remain unbeaten and dangerous on the counter via Hakimi, capable of making it uncomfortable, but France's superior defensive record (0.72 xGA) and knockout pedigree should be enough for a controlled, low-scoring win."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T19:39:21.103344"
+    },
+    {
+      "match": "France vs Morocco",
+      "home": "France",
+      "away": "Morocco",
+      "model": "Gemini",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "2-0",
+        "home_win_probability": 60,
+        "draw_probability": 25,
+        "away_win_probability": 15,
+        "extra_time_probability": 25,
+        "penalty_probability": 10,
+        "final_winner": "home",
+        "confidence": 75,
+        "risk_level": "medium",
+        "reasoning": "France enters the quarter-finals in dominant attacking form, having scored 14 goals in the tournament led by Kylian Mbapp\u00e9. While Morocco boasts excellent defensive organization and tournament resilience, France's elite individual quality and tactical versatility give them a clear edge. Les Bleus are expected to find the breakthrough and control the game state, mimicking their efficient 2022 victory."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T19:40:02.436009"
+    },
+    {
+      "match": "France vs Morocco",
+      "home": "France",
+      "away": "Morocco",
+      "model": "Codex",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "1-0",
+        "home_win_probability": 55,
+        "draw_probability": 27,
+        "away_win_probability": 18,
+        "extra_time_probability": 27,
+        "penalty_probability": 12,
+        "final_winner": "home",
+        "confidence": 61,
+        "risk_level": "medium",
+        "reasoning": "France have the higher attacking ceiling through Mbappe, Olise and Dembele, but Morocco's compact block and transition threat should keep the match tight. Morocco arrive with real momentum and defensive resilience, though Saibari's injury concern slightly reduces their midfield punch. Knockout caution points to a low-margin France advance rather than a comfortable win."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T19:54:13.861497"
+    },
+    {
+      "match": "Spain vs Belgium",
+      "home": "Spain",
+      "away": "Belgium",
+      "model": "GPT",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "2-1",
+        "home_win_probability": 51,
+        "draw_probability": 27,
+        "away_win_probability": 22,
+        "extra_time_probability": 27,
+        "penalty_probability": 11,
+        "final_winner": "home",
+        "confidence": 64,
+        "risk_level": "medium",
+        "reasoning": "Spain\u2019s midfield control, settled structure, and stronger tournament consistency give them the edge. Belgium\u2019s transition threat is dangerous, but losing Onana weakens their defensive midfield protection. Spain are more likely to control territory and create the cleaner chances in a tight knockout match."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T19:56:51.398902"
+    },
+    {
+      "match": "Spain vs Belgium",
+      "home": "Spain",
+      "away": "Belgium",
+      "model": "Claude",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "1-0",
+        "home_win_probability": 64,
+        "draw_probability": 22,
+        "away_win_probability": 14,
+        "extra_time_probability": 22,
+        "penalty_probability": 9,
+        "final_winner": "home",
+        "confidence": 74,
+        "risk_level": "low",
+        "reasoning": "Spain arrive unbeaten with five clean sheets, conceding just once all tournament, and their Rodri-anchored midfield should stifle Belgium's De Bruyne-led attack much as it has every opponent so far. Belgium's aging defensive spine (Courtois 33, Mechele, Theate) has been shakier and they've conceded in each of their last three, giving Spain's Yamal and Oyarzabal a route through, but a single-goal, knockout-tight margin is most likely."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T19:57:28.204979"
+    },
+    {
+      "match": "Spain vs Belgium",
+      "home": "Spain",
+      "away": "Belgium",
+      "model": "Gemini",
+      "prediction": {
+        "result_90min": "draw",
+        "score_90min": "1-1",
+        "home_win_probability": 35,
+        "draw_probability": 35,
+        "away_win_probability": 30,
+        "extra_time_probability": 35,
+        "penalty_probability": 20,
+        "final_winner": "home",
+        "confidence": 70,
+        "risk_level": "high",
+        "reasoning": "Spain has yet to concede a goal in the knockout stages, presenting a formidable challenge to Belgium's high-scoring offense that has netted seven goals in two matches. These contrasting strengths are likely to neutralize each other during regulation time, resulting in a tightly contested draw. Ultimately, Spain's superior possession play and depth give them a slight edge to advance in extra time or penalties."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T20:04:17.238716"
+    },
+    {
+      "match": "Spain vs Belgium",
+      "home": "Spain",
+      "away": "Belgium",
+      "model": "Codex",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "1-0",
+        "home_win_probability": 52,
+        "draw_probability": 29,
+        "away_win_probability": 19,
+        "extra_time_probability": 29,
+        "penalty_probability": 13,
+        "final_winner": "home",
+        "confidence": 62,
+        "risk_level": "medium",
+        "reasoning": "Spain have controlled the tournament with elite possession, midfield security and a perfect defensive record, while Yamal appears fit and decisive again. Belgium's 4-1 win over the USA showed renewed attacking threat, but their older core and defensive gaps are harder to hide against Spain's structure. Knockout caution and Belgium's transition danger keep it tight, with Spain more likely to create the decisive high-quality chance."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T20:04:38.140155"
+    },
+    {
+      "match": "Norway vs England",
+      "home": "Norway",
+      "away": "England",
+      "model": "GPT",
+      "prediction": {
+        "result_90min": "away",
+        "score_90min": "1-2",
+        "home_win_probability": 27,
+        "draw_probability": 28,
+        "away_win_probability": 45,
+        "extra_time_probability": 28,
+        "penalty_probability": 12,
+        "final_winner": "away",
+        "confidence": 61,
+        "risk_level": "medium",
+        "reasoning": "Norway\u2019s Haaland-Odegaard threat and win over Brazil make them dangerous, but squad illness and fatigue concerns reduce their stability. England have more depth, stronger knockout experience, and multiple creators around Kane and Bellingham. Norway can score, but England are more likely to control key phases and advance in 90 minutes."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T20:06:55.374435"
+    },
+    {
+      "match": "Norway vs England",
+      "home": "Norway",
+      "away": "England",
+      "model": "Claude",
+      "prediction": {
+        "result_90min": "away",
+        "score_90min": "2-1",
+        "home_win_probability": 26,
+        "draw_probability": 26,
+        "away_win_probability": 48,
+        "extra_time_probability": 26,
+        "penalty_probability": 11,
+        "final_winner": "away",
+        "confidence": 63,
+        "risk_level": "medium",
+        "reasoning": "Haaland is unstoppable (7 goals, level with Messi/Mbappe for Golden Boot) and just knocked out Brazil, but England carry the deeper squad, calmer defense, and are unbeaten in five with Kane in similarly lethal form (6 goals). England are missing suspended Quansah and both sides have leaked goals lately, pointing to an open, high-scoring quarterfinal that England's greater overall depth should narrowly edge."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T20:07:31.114532"
+    },
+    {
+      "match": "Norway vs England",
+      "home": "Norway",
+      "away": "England",
+      "model": "Gemini",
+      "prediction": {
+        "result_90min": "away",
+        "score_90min": "1-3",
+        "home_win_probability": 20,
+        "draw_probability": 25,
+        "away_win_probability": 55,
+        "extra_time_probability": 25,
+        "penalty_probability": 10,
+        "final_winner": "away",
+        "confidence": 75,
+        "risk_level": "medium",
+        "reasoning": "Erling Haaland's exceptional tournament form provides Norway with a constant transitional threat that will likely breach England's defense. However, England's overwhelming superiority in squad depth and midfield control will progressively wear down Norway's structured block. As the match enters its final stages, England's elite attacking substitutions will exploit a fatigued Norwegian side to secure a decisive margin."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T20:07:55.727506"
+    },
+    {
+      "match": "Norway vs England",
+      "home": "Norway",
+      "away": "England",
+      "model": "Codex",
+      "prediction": {
+        "result_90min": "draw",
+        "score_90min": "1-1",
+        "home_win_probability": 29,
+        "draw_probability": 30,
+        "away_win_probability": 41,
+        "extra_time_probability": 30,
+        "penalty_probability": 14,
+        "final_winner": "away",
+        "confidence": 56,
+        "risk_level": "high",
+        "reasoning": "England have greater squad depth and knockout experience, but right-back injuries and suspension issues create a clear channel for Norway's wide runners and Haaland. Norway's win over Brazil and Haaland's elite tournament finishing make them a live upset threat despite illness and hotel disruption. A tight 90 minutes is likely, with England slightly better equipped to manage extra time and penalties."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T20:08:11.969856"
+    },
+    {
+      "match": "Argentina vs Switzerland",
+      "home": "Argentina",
+      "away": "Switzerland",
+      "model": "GPT",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "2-0",
+        "home_win_probability": 58,
+        "draw_probability": 25,
+        "away_win_probability": 17,
+        "extra_time_probability": 25,
+        "penalty_probability": 9,
+        "final_winner": "home",
+        "confidence": 68,
+        "risk_level": "medium",
+        "reasoning": "Argentina arrive with superior squad depth, knockout experience, and late-game attacking quality, while Switzerland are coming off 120 minutes and have key attacking injuries. Switzerland\u2019s defensive structure and Kobel\u2019s form can keep the game close, but their limited chance creation is a concern. Argentina are more likely to control territory and decide it in 90 minutes."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T20:09:46.831972"
+    },
+    {
+      "match": "Argentina vs Switzerland",
+      "home": "Argentina",
+      "away": "Switzerland",
+      "model": "Claude",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "2-1",
+        "home_win_probability": 58,
+        "draw_probability": 24,
+        "away_win_probability": 18,
+        "extra_time_probability": 24,
+        "penalty_probability": 11,
+        "final_winner": "home",
+        "confidence": 70,
+        "risk_level": "medium",
+        "reasoning": "Argentina are clear favorites (-140 ML, -310 to advance) with Messi's eight goals leading a deep, attacking squad, though they have looked vulnerable late in games, needing extra time past Cape Verde and a stunning comeback past Egypt. Switzerland are defensively disciplined and reached this stage via a goalless, low-event penalty shootout win over Colombia, so a cagey Argentina win with chances at both ends is the likeliest path to a Kansas City semifinal berth."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T20:10:41.776866"
+    },
+    {
+      "match": "Argentina vs Switzerland",
+      "home": "Argentina",
+      "away": "Switzerland",
+      "model": "Gemini",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "2-1",
+        "home_win_probability": 60,
+        "draw_probability": 25,
+        "away_win_probability": 15,
+        "extra_time_probability": 25,
+        "penalty_probability": 10,
+        "final_winner": "home",
+        "confidence": 80,
+        "risk_level": "medium",
+        "reasoning": "Argentina boasts overwhelming attacking firepower led by an in-form Lionel Messi, though their recent defensive vulnerabilities offer Switzerland a glimmer of hope. However, Switzerland's lack of attacking threat against top-tier opposition will likely allow the reigning champions to dictate the tempo. Argentina's superior depth and big-match experience should ultimately overcome the stubborn Swiss block in regulation time."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T20:11:06.745665"
+    },
+    {
+      "match": "Argentina vs Switzerland",
+      "home": "Argentina",
+      "away": "Switzerland",
+      "model": "Codex",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "1-0",
+        "home_win_probability": 56,
+        "draw_probability": 27,
+        "away_win_probability": 17,
+        "extra_time_probability": 27,
+        "penalty_probability": 12,
+        "final_winner": "home",
+        "confidence": 63,
+        "risk_level": "medium",
+        "reasoning": "Argentina have the stronger attacking ceiling and Messi is in decisive form, but their comeback against Egypt also exposed defensive fragility. Switzerland's disciplined block and Kobel's form make this likely to be low-scoring, though their 120-minute shootout win over Colombia and Manzambi's absence reduce their attacking upside. Argentina are better equipped to find one decisive moment before extra time."
+      },
+      "actual": null,
+      "created_at": "2026-07-08T20:11:22.579321"
     }
   ]
 }
