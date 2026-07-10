@@ -1038,7 +1038,13 @@
         "risk_level": "medium",
         "reasoning": "France have the stronger attacking ceiling, elite knockout experience, and Mbappe\u2019s form gives them the clearest match-winning threat. Morocco are organized, confident, and dangerous in transition, but injury uncertainty around Saibari slightly weakens their attacking balance. This should be tight, but France are more likely to create the decisive high-quality chances."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "2-0",
+        "result_90min": "home",
+        "final_winner": "home",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T19:38:54.018738"
     },
     {
@@ -1059,7 +1065,13 @@
         "risk_level": "low",
         "reasoning": "France have won all six matches and never lost to Morocco in six meetings, with Mbappe (19 World Cup goals) leading the tournament's most prolific attack against a Morocco side missing top scorer Saibari to a hamstring injury. Morocco remain unbeaten and dangerous on the counter via Hakimi, capable of making it uncomfortable, but France's superior defensive record (0.72 xGA) and knockout pedigree should be enough for a controlled, low-scoring win."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "2-0",
+        "result_90min": "home",
+        "final_winner": "home",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T19:39:21.103344"
     },
     {
@@ -1080,7 +1092,13 @@
         "risk_level": "medium",
         "reasoning": "France enters the quarter-finals in dominant attacking form, having scored 14 goals in the tournament led by Kylian Mbapp\u00e9. While Morocco boasts excellent defensive organization and tournament resilience, France's elite individual quality and tactical versatility give them a clear edge. Les Bleus are expected to find the breakthrough and control the game state, mimicking their efficient 2022 victory."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "2-0",
+        "result_90min": "home",
+        "final_winner": "home",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T19:40:02.436009"
     },
     {
@@ -1101,10 +1119,16 @@
         "risk_level": "medium",
         "reasoning": "France have the higher attacking ceiling through Mbappe, Olise and Dembele, but Morocco's compact block and transition threat should keep the match tight. Morocco arrive with real momentum and defensive resilience, though Saibari's injury concern slightly reduces their midfield punch. Knockout caution points to a low-margin France advance rather than a comfortable win."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "2-0",
+        "result_90min": "home",
+        "final_winner": "home",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T19:54:13.861497"
     },
-      {
+    {
       "match": "France vs Morocco",
       "home": "France",
       "away": "Morocco",
@@ -1122,7 +1146,13 @@
         "risk_level": "medium",
         "reasoning": "Morocco best player is injured, anf France are the best team in the world, so France will win."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "2-0",
+        "result_90min": "home",
+        "final_winner": "home",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T20:11:22.579321"
     },
     {
@@ -1209,7 +1239,7 @@
       "actual": null,
       "created_at": "2026-07-08T20:04:38.140155"
     },
-      {
+    {
       "match": "Spain vs Belgium",
       "home": "Spain",
       "away": "Belgium",
@@ -1314,7 +1344,7 @@
       "actual": null,
       "created_at": "2026-07-08T20:08:11.969856"
     },
-      {
+    {
       "match": "Norway vs England",
       "home": "Norway",
       "away": "England",
