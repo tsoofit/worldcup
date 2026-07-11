@@ -1318,7 +1318,7 @@
       "model": "Claude",
       "prediction": {
         "result_90min": "away",
-        "score_90min": "2-1",
+        "score_90min": "1-2",
         "home_win_probability": 26,
         "draw_probability": 26,
         "away_win_probability": 48,
@@ -1381,7 +1381,7 @@
       "model": "Tsoofit",
       "prediction": {
         "result_90min": "away",
-        "score_90min": "2-1",
+        "score_90min": "1-2",
         "home_win_probability": 20,
         "draw_probability": 15,
         "away_win_probability": 65,
