@@ -1173,7 +1173,13 @@
         "risk_level": "medium",
         "reasoning": "Spain\u2019s midfield control, settled structure, and stronger tournament consistency give them the edge. Belgium\u2019s transition threat is dangerous, but losing Onana weakens their defensive midfield protection. Spain are more likely to control territory and create the cleaner chances in a tight knockout match."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "2-1",
+        "result_90min": "home",
+        "final_winner": "home",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T19:56:51.398902"
     },
     {
@@ -1194,7 +1200,13 @@
         "risk_level": "low",
         "reasoning": "Spain arrive unbeaten with five clean sheets, conceding just once all tournament, and their Rodri-anchored midfield should stifle Belgium's De Bruyne-led attack much as it has every opponent so far. Belgium's aging defensive spine (Courtois 33, Mechele, Theate) has been shakier and they've conceded in each of their last three, giving Spain's Yamal and Oyarzabal a route through, but a single-goal, knockout-tight margin is most likely."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "2-1",
+        "result_90min": "home",
+        "final_winner": "home",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T19:57:28.204979"
     },
     {
@@ -1215,7 +1227,13 @@
         "risk_level": "high",
         "reasoning": "Spain has yet to concede a goal in the knockout stages, presenting a formidable challenge to Belgium's high-scoring offense that has netted seven goals in two matches. These contrasting strengths are likely to neutralize each other during regulation time, resulting in a tightly contested draw. Ultimately, Spain's superior possession play and depth give them a slight edge to advance in extra time or penalties."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "2-1",
+        "result_90min": "home",
+        "final_winner": "home",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T20:04:17.238716"
     },
     {
@@ -1236,7 +1254,13 @@
         "risk_level": "medium",
         "reasoning": "Spain have controlled the tournament with elite possession, midfield security and a perfect defensive record, while Yamal appears fit and decisive again. Belgium's 4-1 win over the USA showed renewed attacking threat, but their older core and defensive gaps are harder to hide against Spain's structure. Knockout caution and Belgium's transition danger keep it tight, with Spain more likely to create the decisive high-quality chance."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "2-1",
+        "result_90min": "home",
+        "final_winner": "home",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T20:04:38.140155"
     },
     {
@@ -1257,7 +1281,13 @@
         "risk_level": "medium",
         "reasoning": "Spain didn't concede a goal in the knockout stages."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "2-1",
+        "result_90min": "home",
+        "final_winner": "home",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T20:11:22.579321"
     },
     {
