@@ -1308,7 +1308,13 @@
         "risk_level": "medium",
         "reasoning": "Norway\u2019s Haaland-Odegaard threat and win over Brazil make them dangerous, but squad illness and fatigue concerns reduce their stability. England have more depth, stronger knockout experience, and multiple creators around Kane and Bellingham. Norway can score, but England are more likely to control key phases and advance in 90 minutes."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-1",
+        "result_90min": "draw",
+        "final_winner": "away",
+        "went_extra_time": true,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T20:06:55.374435"
     },
     {
@@ -1329,7 +1335,13 @@
         "risk_level": "medium",
         "reasoning": "Haaland is unstoppable (7 goals, level with Messi/Mbappe for Golden Boot) and just knocked out Brazil, but England carry the deeper squad, calmer defense, and are unbeaten in five with Kane in similarly lethal form (6 goals). England are missing suspended Quansah and both sides have leaked goals lately, pointing to an open, high-scoring quarterfinal that England's greater overall depth should narrowly edge."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-1",
+        "result_90min": "draw",
+        "final_winner": "away",
+        "went_extra_time": true,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T20:07:31.114532"
     },
     {
@@ -1350,7 +1362,13 @@
         "risk_level": "medium",
         "reasoning": "Erling Haaland's exceptional tournament form provides Norway with a constant transitional threat that will likely breach England's defense. However, England's overwhelming superiority in squad depth and midfield control will progressively wear down Norway's structured block. As the match enters its final stages, England's elite attacking substitutions will exploit a fatigued Norwegian side to secure a decisive margin."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-1",
+        "result_90min": "draw",
+        "final_winner": "away",
+        "went_extra_time": true,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T20:07:55.727506"
     },
     {
@@ -1371,7 +1389,13 @@
         "risk_level": "high",
         "reasoning": "England have greater squad depth and knockout experience, but right-back injuries and suspension issues create a clear channel for Norway's wide runners and Haaland. Norway's win over Brazil and Haaland's elite tournament finishing make them a live upset threat despite illness and hotel disruption. A tight 90 minutes is likely, with England slightly better equipped to manage extra time and penalties."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-1",
+        "result_90min": "draw",
+        "final_winner": "away",
+        "went_extra_time": true,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T20:08:11.969856"
     },
     {
@@ -1392,7 +1416,13 @@
         "risk_level": "medium",
         "reasoning": "England is stronger."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-1",
+        "result_90min": "draw",
+        "final_winner": "away",
+        "went_extra_time": true,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T20:11:22.579321"
     },
     {
@@ -1413,7 +1443,13 @@
         "risk_level": "medium",
         "reasoning": "Argentina arrive with superior squad depth, knockout experience, and late-game attacking quality, while Switzerland are coming off 120 minutes and have key attacking injuries. Switzerland\u2019s defensive structure and Kobel\u2019s form can keep the game close, but their limited chance creation is a concern. Argentina are more likely to control territory and decide it in 90 minutes."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-1",
+        "result_90min": "draw",
+        "final_winner": "home",
+        "went_extra_time": true,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T20:09:46.831972"
     },
     {
@@ -1434,7 +1470,13 @@
         "risk_level": "medium",
         "reasoning": "Argentina are clear favorites (-140 ML, -310 to advance) with Messi's eight goals leading a deep, attacking squad, though they have looked vulnerable late in games, needing extra time past Cape Verde and a stunning comeback past Egypt. Switzerland are defensively disciplined and reached this stage via a goalless, low-event penalty shootout win over Colombia, so a cagey Argentina win with chances at both ends is the likeliest path to a Kansas City semifinal berth."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-1",
+        "result_90min": "draw",
+        "final_winner": "home",
+        "went_extra_time": true,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T20:10:41.776866"
     },
     {
@@ -1455,7 +1497,13 @@
         "risk_level": "medium",
         "reasoning": "Argentina boasts overwhelming attacking firepower led by an in-form Lionel Messi, though their recent defensive vulnerabilities offer Switzerland a glimmer of hope. However, Switzerland's lack of attacking threat against top-tier opposition will likely allow the reigning champions to dictate the tempo. Argentina's superior depth and big-match experience should ultimately overcome the stubborn Swiss block in regulation time."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-1",
+        "result_90min": "draw",
+        "final_winner": "home",
+        "went_extra_time": true,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T20:11:06.745665"
     },
     {
@@ -1476,7 +1524,13 @@
         "risk_level": "medium",
         "reasoning": "Argentina have the stronger attacking ceiling and Messi is in decisive form, but their comeback against Egypt also exposed defensive fragility. Switzerland's disciplined block and Kobel's form make this likely to be low-scoring, though their 120-minute shootout win over Colombia and Manzambi's absence reduce their attacking upside. Argentina are better equipped to find one decisive moment before extra time."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-1",
+        "result_90min": "draw",
+        "final_winner": "home",
+        "went_extra_time": true,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T20:11:22.579321"
     },
     {
@@ -1497,8 +1551,182 @@
         "risk_level": "medium",
         "reasoning": "Messi is God."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-1",
+        "result_90min": "draw",
+        "final_winner": "home",
+        "went_extra_time": true,
+        "went_penalties": false
+      },
       "created_at": "2026-07-08T20:11:22.579321"
+    },
+    {
+      "match": "France vs Spain",
+      "home": "France",
+      "away": "Spain",
+      "model": "GPT",
+      "prediction": {
+        "result_90min": "draw",
+        "score_90min": "1-1",
+        "home_win_probability": 39,
+        "draw_probability": 31,
+        "away_win_probability": 30,
+        "extra_time_probability": 31,
+        "penalty_probability": 14,
+        "final_winner": "home",
+        "confidence": 56,
+        "risk_level": "high",
+        "reasoning": "France\u2019s greater attacking output and transition threat give them a narrow edge, although uncertainty over Saliba and Upamecano could weaken their defence. Spain\u2019s exceptional ball control and defensive record should restrict clear chances and keep the match finely balanced. France are marginally more likely to advance after extra time or penalties."
+      },
+      "actual": null,
+      "created_at": "2026-07-12T08:58:51.543564"
+    },
+    {
+      "match": "France vs Spain",
+      "home": "France",
+      "away": "Spain",
+      "model": "Claude",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "2-1",
+        "home_win_probability": 45,
+        "draw_probability": 30,
+        "away_win_probability": 25,
+        "extra_time_probability": 30,
+        "penalty_probability": 13,
+        "final_winner": "home",
+        "confidence": 66,
+        "risk_level": "medium",
+        "reasoning": "France arrive unbeaten and heavily favored (+135 ML, -144/-145 to advance) with Mbappe in career-best form (8 goals, scoring in two of three prior meetings vs Spain), while Spain counter with elite ball control via Yamal, Pedri and a near-flawless defensive record. The over/under sits at 2.5 goals with experts leaning over, suggesting an open, attacking semifinal that France's superior firepower should edge, though Spain's quality makes a draw or extra time genuinely plausible."
+      },
+      "actual": null,
+      "created_at": "2026-07-12T08:59:20.831824"
+    },
+    {
+      "match": "France vs Spain",
+      "home": "France",
+      "away": "Spain",
+      "model": "Gemini",
+      "prediction": {
+        "result_90min": "draw",
+        "score_90min": "1-1",
+        "home_win_probability": 30,
+        "draw_probability": 40,
+        "away_win_probability": 30,
+        "extra_time_probability": 40,
+        "penalty_probability": 20,
+        "final_winner": "away",
+        "confidence": 70,
+        "risk_level": "high",
+        "reasoning": "France's formidable defensive resilience, highlighted by consecutive knockout clean sheets, will clash intensely with Spain's possession-heavy tactical approach. This stylistic neutralizing makes a tightly contested regulation draw the most likely initial outcome. However, Spain's superior midfield depth and experience in dictating game tempo give them a marginal edge to secure victory in extra time or a potential shootout."
+      },
+      "actual": null,
+      "created_at": "2026-07-12T09:00:07.479086"
+    },
+    {
+      "match": "France vs Spain",
+      "home": "France",
+      "away": "Spain",
+      "model": "Codex",
+      "prediction": {
+        "result_90min": "draw",
+        "score_90min": "1-1",
+        "home_win_probability": 39,
+        "draw_probability": 31,
+        "away_win_probability": 30,
+        "extra_time_probability": 31,
+        "penalty_probability": 15,
+        "final_winner": "home",
+        "confidence": 55,
+        "risk_level": "high",
+        "reasoning": "Spain's press, Rodri-led control and strong xG profile can limit France for long spells, but France have more rest, elite transition speed and Mbappe plus Dembele in decisive form. Both defenses have allowed very little shot quality, making a tight semi-final more likely than an open game. France's depth and knockout experience give them a slight edge if it goes beyond 90 minutes."
+      },
+      "actual": null,
+      "created_at": "2026-07-12T09:00:45.708152"
+    },
+    {
+      "match": "England vs Argentina",
+      "home": "England",
+      "away": "Argentina",
+      "model": "GPT",
+      "prediction": {
+        "result_90min": "draw",
+        "score_90min": "1-1",
+        "home_win_probability": 36,
+        "draw_probability": 31,
+        "away_win_probability": 33,
+        "extra_time_probability": 31,
+        "penalty_probability": 14,
+        "final_winner": "home",
+        "confidence": 54,
+        "risk_level": "high",
+        "reasoning": "Both teams required extra time in the quarter-finals, making fatigue and game management significant factors. Argentina offer greater control and tournament experience, while England\u2019s physicality, depth, and Bellingham\u2019s form provide a narrow counterweight. The matchup is likely to remain level through 90 minutes, with England marginally more likely to advance."
+      },
+      "actual": null,
+      "created_at": "2026-07-12T09:01:22.215351"
+    },
+    {
+      "match": "England vs Argentina",
+      "home": "England",
+      "away": "Argentina",
+      "model": "Claude",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "2-1",
+        "home_win_probability": 45,
+        "draw_probability": 30,
+        "away_win_probability": 25,
+        "extra_time_probability": 30,
+        "penalty_probability": 13,
+        "final_winner": "home",
+        "confidence": 66,
+        "risk_level": "medium",
+        "reasoning": "France arrive unbeaten and heavily favored (+135 ML, -144/-145 to advance) with Mbappe in career-best form (8 goals, scoring in two of three prior meetings vs Spain), while Spain counter with elite ball control via Yamal, Pedri and a near-flawless defensive record. The over/under sits at 2.5 goals with experts leaning over, suggesting an open, attacking semifinal that France's superior firepower should edge, though Spain's quality makes a draw or extra time genuinely plausible."
+      },
+      "actual": null,
+      "created_at": "2026-07-12T09:02:04.829563"
+    },
+    {
+      "match": "England vs Argentina",
+      "home": "England",
+      "away": "Argentina",
+      "model": "Gemini",
+      "prediction": {
+        "result_90min": "draw",
+        "score_90min": "1-1",
+        "home_win_probability": 30,
+        "draw_probability": 40,
+        "away_win_probability": 30,
+        "extra_time_probability": 40,
+        "penalty_probability": 25,
+        "final_winner": "away",
+        "confidence": 75,
+        "risk_level": "high",
+        "reasoning": "Argentina's recent grueling extra-time victory over Switzerland highlights their resilience, but physical fatigue may limit their ability to secure a decisive result in regulation against a deep England squad. England's disciplined structure and midfield control will likely force a tightly contested draw after 90 minutes. Ultimately, Argentina's unmatched tournament experience and proven penalty shootout pedigree provide them a crucial edge to advance."
+      },
+      "actual": null,
+      "created_at": "2026-07-12T09:02:47.590265"
+    },
+    {
+      "match": "England vs Argentina",
+      "home": "England",
+      "away": "Argentina",
+      "model": "Codex",
+      "prediction": {
+        "result_90min": "draw",
+        "score_90min": "1-1",
+        "home_win_probability": 31,
+        "draw_probability": 30,
+        "away_win_probability": 39,
+        "extra_time_probability": 30,
+        "penalty_probability": 14,
+        "final_winner": "away",
+        "confidence": 56,
+        "risk_level": "high",
+        "reasoning": "England are close to full strength and Bellingham is carrying elite knockout form, but their quarter-final performance was uneven and extra time in Miami adds fatigue risk. Argentina also needed extra time, yet Messi, Alvarez and their deeper tournament control give them a slightly cleaner route in decisive moments. Both teams have conceded in chaotic knockout games, making a tight draw after 90 minutes more likely than a comfortable win."
+      },
+      "actual": null,
+      "created_at": "2026-07-12T09:03:18.649130"
     }
   ]
 }
