@@ -1713,7 +1713,13 @@
         "risk_level": "high",
         "reasoning": "Both teams required extra time in the quarter-finals, making fatigue and game management significant factors. Argentina offer greater control and tournament experience, while England\u2019s physicality, depth, and Bellingham\u2019s form provide a narrow counterweight. The matchup is likely to remain level through 90 minutes, with England marginally more likely to advance."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-2",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-12T09:01:22.215351"
     },
     {
@@ -1734,7 +1740,13 @@
         "risk_level": "medium",
         "reasoning": "France arrive unbeaten and heavily favored (+135 ML, -144/-145 to advance) with Mbappe in career-best form (8 goals, scoring in two of three prior meetings vs Spain), while Spain counter with elite ball control via Yamal, Pedri and a near-flawless defensive record. The over/under sits at 2.5 goals with experts leaning over, suggesting an open, attacking semifinal that France's superior firepower should edge, though Spain's quality makes a draw or extra time genuinely plausible."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-2",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-12T09:02:04.829563"
     },
     {
@@ -1755,7 +1767,13 @@
         "risk_level": "high",
         "reasoning": "Argentina's recent grueling extra-time victory over Switzerland highlights their resilience, but physical fatigue may limit their ability to secure a decisive result in regulation against a deep England squad. England's disciplined structure and midfield control will likely force a tightly contested draw after 90 minutes. Ultimately, Argentina's unmatched tournament experience and proven penalty shootout pedigree provide them a crucial edge to advance."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-2",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-12T09:02:47.590265"
     },
     {
@@ -1776,7 +1794,13 @@
         "risk_level": "high",
         "reasoning": "England are close to full strength and Bellingham is carrying elite knockout form, but their quarter-final performance was uneven and extra time in Miami adds fatigue risk. Argentina also needed extra time, yet Messi, Alvarez and their deeper tournament control give them a slightly cleaner route in decisive moments. Both teams have conceded in chaotic knockout games, making a tight draw after 90 minutes more likely than a comfortable win."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-2",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-12T09:03:18.649130"
     },
     {
@@ -1797,7 +1821,13 @@
         "risk_level": "high",
         "reasoning": "England is stronger."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "1-2",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-12T09:00:45.708152"
     }
   ]
