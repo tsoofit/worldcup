@@ -1578,7 +1578,13 @@
         "risk_level": "high",
         "reasoning": "France\u2019s greater attacking output and transition threat give them a narrow edge, although uncertainty over Saliba and Upamecano could weaken their defence. Spain\u2019s exceptional ball control and defensive record should restrict clear chances and keep the match finely balanced. France are marginally more likely to advance after extra time or penalties."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "0-2",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-12T08:58:51.543564"
     },
     {
@@ -1599,7 +1605,13 @@
         "risk_level": "medium",
         "reasoning": "France arrive unbeaten and heavily favored (+135 ML, -144/-145 to advance) with Mbappe in career-best form (8 goals, scoring in two of three prior meetings vs Spain), while Spain counter with elite ball control via Yamal, Pedri and a near-flawless defensive record. The over/under sits at 2.5 goals with experts leaning over, suggesting an open, attacking semifinal that France's superior firepower should edge, though Spain's quality makes a draw or extra time genuinely plausible."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "0-2",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-12T08:59:20.831824"
     },
     {
@@ -1620,7 +1632,13 @@
         "risk_level": "high",
         "reasoning": "France's formidable defensive resilience, highlighted by consecutive knockout clean sheets, will clash intensely with Spain's possession-heavy tactical approach. This stylistic neutralizing makes a tightly contested regulation draw the most likely initial outcome. However, Spain's superior midfield depth and experience in dictating game tempo give them a marginal edge to secure victory in extra time or a potential shootout."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "0-2",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-12T09:00:07.479086"
     },
     {
@@ -1641,10 +1659,16 @@
         "risk_level": "high",
         "reasoning": "Spain's press, Rodri-led control and strong xG profile can limit France for long spells, but France have more rest, elite transition speed and Mbappe plus Dembele in decisive form. Both defenses have allowed very little shot quality, making a tight semi-final more likely than an open game. France's depth and knockout experience give them a slight edge if it goes beyond 90 minutes."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "0-2",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-12T09:00:45.708152"
     },
-      {
+    {
       "match": "France vs Spain",
       "home": "France",
       "away": "Spain",
@@ -1660,9 +1684,15 @@
         "final_winner": "home",
         "confidence": 70,
         "risk_level": "high",
-        "reasoning": "XXXSpain's press, Rodri-led control and strong xG profile can limit France for long spells, but France have more rest, elite transition speed and Mbappe plus Dembele in decisive form. Both defenses have allowed very little shot quality, making a tight semi-final more likely than an open game. France's depth and knockout experience give them a slight edge if it goes beyond 90 minutes."
+        "reasoning": "France is stronger"
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "0-2",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-12T09:00:45.708152"
     },
     {
@@ -1749,7 +1779,7 @@
       "actual": null,
       "created_at": "2026-07-12T09:03:18.649130"
     },
-      {
+    {
       "match": "England vs Argentina",
       "home": "England",
       "away": "Argentina",
