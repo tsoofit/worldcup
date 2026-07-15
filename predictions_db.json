@@ -1644,6 +1644,27 @@
       "actual": null,
       "created_at": "2026-07-12T09:00:45.708152"
     },
+      {
+      "match": "France vs Spain",
+      "home": "France",
+      "away": "Spain",
+      "model": "Tsoofit",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "2-1",
+        "home_win_probability": 60,
+        "draw_probability": 10,
+        "away_win_probability": 30,
+        "extra_time_probability": 10,
+        "penalty_probability": 5,
+        "final_winner": "home",
+        "confidence": 70,
+        "risk_level": "high",
+        "reasoning": "XXXSpain's press, Rodri-led control and strong xG profile can limit France for long spells, but France have more rest, elite transition speed and Mbappe plus Dembele in decisive form. Both defenses have allowed very little shot quality, making a tight semi-final more likely than an open game. France's depth and knockout experience give them a slight edge if it goes beyond 90 minutes."
+      },
+      "actual": null,
+      "created_at": "2026-07-12T09:00:45.708152"
+    },
     {
       "match": "England vs Argentina",
       "home": "England",
@@ -1727,6 +1748,27 @@
       },
       "actual": null,
       "created_at": "2026-07-12T09:03:18.649130"
+    },
+      {
+      "match": "England vs Argentina",
+      "home": "England",
+      "away": "Argentina",
+      "model": "Tsoofit",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "3-1",
+        "home_win_probability": 60,
+        "draw_probability": 10,
+        "away_win_probability": 30,
+        "extra_time_probability": 10,
+        "penalty_probability": 5,
+        "final_winner": "home",
+        "confidence": 60,
+        "risk_level": "high",
+        "reasoning": "England is stronger."
+      },
+      "actual": null,
+      "created_at": "2026-07-12T09:00:45.708152"
     }
   ]
 }
