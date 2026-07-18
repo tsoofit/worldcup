@@ -7,6 +7,7 @@ import altair as alt
 from datetime import datetime
 
 DATA_FILE = "predictions_db.json"
+VISITOR_FILE = "visitor_count.json"
 
 POINTS_V1 = {
     "final_winner": 5,
@@ -33,6 +34,43 @@ def load_db():
 def save_db(db):
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(db, f, indent=2)
+
+
+# --------------------------------------------------
+# VISITOR COUNTER
+# --------------------------------------------------
+
+def load_visitor_count():
+    if not os.path.exists(VISITOR_FILE):
+        return 0
+
+    try:
+        with open(VISITOR_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return int(data.get("count", 0))
+    except (OSError, ValueError, TypeError, json.JSONDecodeError):
+        return 0
+
+
+def save_visitor_count(count):
+    temp_file = f"{VISITOR_FILE}.tmp"
+
+    try:
+        with open(temp_file, "w", encoding="utf-8") as f:
+            json.dump({"count": count}, f, indent=2)
+        os.replace(temp_file, VISITOR_FILE)
+    except OSError:
+        pass
+
+
+def register_visit():
+    if "visit_registered" not in st.session_state:
+        count = load_visitor_count() + 1
+        save_visitor_count(count)
+        st.session_state.visit_registered = True
+        st.session_state.visit_count = count
+
+    return st.session_state.get("visit_count", load_visitor_count())
 
 
 # --------------------------------------------------
@@ -109,6 +147,34 @@ def display_model_name(model):
         return "15y old teenager"
 
     return model
+
+
+def display_model_with_icon(model):
+    name = display_model_name(model)
+    normalized = str(model).lower().strip()
+
+    if is_human(model):
+        return f"👤 {name}"
+
+    if "chatgpt" in normalized or normalized == "gpt":
+        return f"🟢 {name}"
+
+    if "claude" in normalized:
+        return f"🟣 {name}"
+
+    if "gemini" in normalized:
+        return f"🔷 {name}"
+
+    if "grok" in normalized:
+        return f"⚫ {name}"
+
+    if "copilot" in normalized:
+        return f"🔵 {name}"
+
+    if "codex" in normalized:
+        return f"🧩 {name}"
+
+    return f"🤖 {name}"
 
 
 def match_has_actual(db, match_name):
@@ -269,15 +335,202 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("⚽ World Cup Prediction League: " \
-    "Man against the (AI) Machine")
-
-st.caption(
-    "AI models vs human prediction benchmark. "
+st.title(
+    "⚽ World Cup Prediction League: "
+    "Man against the (AI) Machine"
 )
 
+st.caption(
+    "AI models vs human prediction benchmark."
+)
+
+visit_count = register_visit()
 db = load_db()
 unique_matches = get_unique_matches(db)
+
+
+# --------------------------------------------------
+# FINAL-DAY HERO AND SUMMARY
+# --------------------------------------------------
+
+total_predictions = len(db.get("matches", []))
+participant_names = {
+    item.get("model", "unknown")
+    for item in db.get("matches", [])
+}
+
+summary_leaderboard = compute_leaderboard(db)
+
+if not summary_leaderboard.empty:
+    summary_leaderboard = summary_leaderboard.sort_values(
+        by=["Success Rate", "Points"],
+        ascending=False
+    )
+    current_leader = summary_leaderboard.iloc[0]
+    current_leader_text = (
+        f"{current_leader['Model']} "
+        f"({current_leader['Success Rate']:.1f}%)"
+    )
+else:
+    current_leader_text = "Pending results"
+
+pending_matches_for_hero = [
+    match
+    for match in unique_matches
+    if not match_has_actual(db, match["match"])
+]
+
+hero_match = None
+
+for match in pending_matches_for_hero:
+    match_name_lower = match["match"].lower()
+
+    if (
+        "spain" in match_name_lower
+        and "argentina" in match_name_lower
+    ):
+        hero_match = match
+        break
+
+if hero_match is None and pending_matches_for_hero:
+    hero_match = pending_matches_for_hero[-1]
+
+if hero_match:
+    hero_name = hero_match["match"]
+    hero_home = hero_match["home"]
+    hero_away = hero_match["away"]
+
+    hero_predictions = [
+        item
+        for item in db.get("matches", [])
+        if item.get("match") == hero_name
+    ]
+
+    st.markdown("---")
+    st.markdown(
+        "### 🏆 Final Day • Same Prompt • Predictions Collected Before Kickoff"
+    )
+    st.markdown(f"## FIFA World Cup Final: {hero_home} vs {hero_away}")
+    st.caption(
+        f"Predictions from {len(hero_predictions)} participants "
+        f"({sum(not is_human(item.get('model', '')) for item in hero_predictions)} AI "
+        f"+ {sum(is_human(item.get('model', '')) for item in hero_predictions)} Human)"
+    )
+
+
+
+
+kpi1, kpi2, kpi3, kpi4, kpi5 = st.columns(5)
+
+with kpi1:
+    st.metric("👥 Visits", visit_count)
+
+with kpi2:
+    st.metric("⚽ Matches", len(unique_matches))
+
+with kpi3:
+    st.metric("🔮 Predictions", total_predictions)
+
+with kpi4:
+    st.metric("🧠 Predictors", len(participant_names))
+
+with kpi5:
+    st.metric("🏆 Current leader", current_leader_text)
+
+
+if not summary_leaderboard.empty:
+    ai_rows = summary_leaderboard[
+        summary_leaderboard["Type"] == "🤖 AI"
+    ]
+
+    human_rows = summary_leaderboard[
+        summary_leaderboard["Type"] == "👤 Human"
+    ]
+
+    ai_average = (
+        round(ai_rows["Success Rate"].mean(), 1)
+        if not ai_rows.empty
+        else None
+    )
+
+    human_rate = (
+        round(human_rows.iloc[0]["Success Rate"], 1)
+        if not human_rows.empty
+        else None
+    )
+
+    st.markdown("### 🤖 Human vs AI")
+
+    compare1, compare2 = st.columns(2)
+
+    with compare1:
+        st.metric(
+            "AI average success rate",
+            f"{ai_average:.1f}%"
+            if ai_average is not None
+            else "N/A"
+        )
+
+    with compare2:
+        st.metric(
+            "Human success rate",
+            f"{human_rate:.1f}%"
+            if human_rate is not None
+            else "N/A"
+        )
+
+
+with st.expander("ℹ️ How the experiment works"):
+    st.markdown(
+        """
+- Every AI model received exactly the same prompt before kickoff.
+- Predictions were collected before each match began.
+- No model saw the other models' answers.
+- The human predictor followed the same structured format.
+- Scores are calculated automatically after the actual result is entered.
+- The visitor count records browser sessions and may reset after a Cloud reboot or redeployment.
+        """
+    )
+
+
+if not summary_leaderboard.empty:
+    st.markdown("### 🥇 Current standings")
+
+    top_standings = summary_leaderboard.copy()
+    top_standings.insert(
+        0,
+        "Rank",
+        range(1, len(top_standings) + 1)
+    )
+
+    top_standings["Model"] = [
+        display_model_with_icon(
+            next(
+                (
+                    raw_model
+                    for raw_model in participant_names
+                    if display_model_name(raw_model) == shown_name
+                ),
+                shown_name
+            )
+        )
+        for shown_name in top_standings["Model"]
+    ]
+
+    st.dataframe(
+        top_standings[
+            [
+                "Rank",
+                "Model",
+                "Points",
+                "Max Points",
+                "Matches",
+                "Success Rate"
+            ]
+        ],
+        use_container_width=True,
+        hide_index=True
+    )
 
 
 # --------------------------------------------------
@@ -408,7 +661,8 @@ if st.session_state.admin_authenticated:
 # LEADERBOARD
 # --------------------------------------------------
 
-st.subheader("🏆 Prediction Leaderboard")
+st.markdown("---")
+st.subheader("📊 Full Leaderboard Analysis")
 
 leaderboard_df = compute_leaderboard(db)
 
@@ -593,7 +847,7 @@ def render_match(match):
             else:
                 status = "❌ Miss"
 
-        shown_model = display_model_name(model)
+        shown_model = display_model_with_icon(model)
 
         if is_match_winner:
             shown_model = f"🥇 {shown_model}"
