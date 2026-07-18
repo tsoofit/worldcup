@@ -374,52 +374,6 @@ if not summary_leaderboard.empty:
 else:
     current_leader_text = "Pending results"
 
-pending_matches_for_hero = [
-    match
-    for match in unique_matches
-    if not match_has_actual(db, match["match"])
-]
-
-hero_match = None
-
-for match in pending_matches_for_hero:
-    match_name_lower = match["match"].lower()
-
-    if (
-        "spain" in match_name_lower
-        and "argentina" in match_name_lower
-    ):
-        hero_match = match
-        break
-
-if hero_match is None and pending_matches_for_hero:
-    hero_match = pending_matches_for_hero[-1]
-
-if hero_match:
-    hero_name = hero_match["match"]
-    hero_home = hero_match["home"]
-    hero_away = hero_match["away"]
-
-    hero_predictions = [
-        item
-        for item in db.get("matches", [])
-        if item.get("match") == hero_name
-    ]
-
-    st.markdown("---")
-    st.markdown(
-        "### 🏆 Final Day • Same Prompt • Predictions Collected Before Kickoff"
-    )
-    st.markdown(f"## FIFA World Cup Final: {hero_home} vs {hero_away}")
-    st.caption(
-        f"Predictions from {len(hero_predictions)} participants "
-        f"({sum(not is_human(item.get('model', '')) for item in hero_predictions)} AI "
-        f"+ {sum(is_human(item.get('model', '')) for item in hero_predictions)} Human)"
-    )
-
-
-
-
 kpi1, kpi2, kpi3, kpi4, kpi5 = st.columns(5)
 
 with kpi1:
