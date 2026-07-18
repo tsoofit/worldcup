@@ -264,12 +264,12 @@ def check_admin_password(password):
 # --------------------------------------------------
 
 st.set_page_config(
-    page_title="World Cup Knockout Predictions",
+    page_title="World Cup Results Predictions",
     page_icon="⚽",
     layout="wide"
 )
 
-st.title("⚽ World Cup Knockout Prediction League: " \
+st.title("⚽ World Cup Prediction League: " \
     "Man against the (AI) Machine")
 
 st.caption(
