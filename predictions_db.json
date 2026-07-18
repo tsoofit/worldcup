@@ -1829,6 +1829,216 @@
         "went_penalties": false
       },
       "created_at": "2026-07-12T09:00:45.708152"
+    },
+    {
+      "match": "Spain vs Argentina",
+      "home": "Spain",
+      "away": "Argentina",
+      "model": "GPT",
+      "prediction": {
+        "result_90min": "draw",
+        "score_90min": "1-1",
+        "home_win_probability": 41,
+        "draw_probability": 30,
+        "away_win_probability": 29,
+        "extra_time_probability": 30,
+        "penalty_probability": 13,
+        "final_winner": "home",
+        "confidence": 58,
+        "risk_level": "high",
+        "reasoning": "Spain have been the tournament's most complete and defensively consistent side, while Argentina continue to rely on elite individual quality and knockout resilience. The final is likely to be cagey with long periods of tactical control rather than open play. Spain hold a slight overall edge to lift the trophy through superior balance and sustained chance creation."
+      },
+      "actual": null,
+      "created_at": "2026-07-18T16:54:49.511542"
+    },
+    {
+      "match": "Spain vs Argentina",
+      "home": "Spain",
+      "away": "Argentina",
+      "model": "Claude",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "1-0",
+        "home_win_probability": 42,
+        "draw_probability": 33,
+        "away_win_probability": 25,
+        "extra_time_probability": 33,
+        "penalty_probability": 16,
+        "final_winner": "home",
+        "confidence": 63,
+        "risk_level": "medium",
+        "reasoning": "Spain have been the tournament's most controlled side, conceding only once in six matches and dismantling France 2-0 in the semifinal, while Argentina has needed late drama in all four knockout wins and arrives more fatigued after successive extra-time battles. Betting markets favor Spain both in regulation (+130 vs +240) and overall (-165 vs +120), and Yamal's craft against a stretched Argentina backline should be enough to produce a narrow, well-managed win, though Messi's big-game pedigree keeps a draw or Argentina upset genuinely live."
+      },
+      "actual": null,
+      "created_at": "2026-07-18T16:55:41.641485"
+    },
+    {
+      "match": "Spain vs Argentina",
+      "home": "Spain",
+      "away": "Argentina",
+      "model": "Gemini",
+      "prediction": {
+        "result_90min": "draw",
+        "score_90min": "1-1",
+        "home_win_probability": 30,
+        "draw_probability": 40,
+        "away_win_probability": 30,
+        "extra_time_probability": 40,
+        "penalty_probability": 20,
+        "final_winner": "home",
+        "confidence": 65,
+        "risk_level": "high",
+        "reasoning": "Spain enters the final with a distinct physical advantage, having avoided extra time in their decisive victories over France and Belgium, whereas Argentina endured multiple grueling knockout matches. While Argentina's vast experience and attacking flair make a tightly contested regulation draw highly likely, Spain's superior midfield control should progressively dictate the tempo. This physical freshness and structural discipline provide Spain the crucial edge to outlast the reigning champions and secure the title in extra time."
+      },
+      "actual": null,
+      "created_at": "2026-07-18T16:58:41.110953"
+    },
+    {
+      "match": "Spain vs Argentina",
+      "home": "Spain",
+      "away": "Argentina",
+      "model": "Codex",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "1-0",
+        "home_win_probability": 45,
+        "draw_probability": 30,
+        "away_win_probability": 25,
+        "extra_time_probability": 30,
+        "penalty_probability": 13,
+        "final_winner": "home",
+        "confidence": 60,
+        "risk_level": "medium",
+        "reasoning": "Spain arrive with the stronger collective control, fresher legs, and an exceptional defensive record, conceding only once across the tournament. Argentina's Messi-led resilience and late-game mentality make them dangerous, but their knockout path has been more chaotic and physically draining. The most likely final pattern is Spain limiting transitions and finding one decisive chance through sustained pressure."
+      },
+      "actual": null,
+      "created_at": "2026-07-18T16:59:15.064126"
+    },
+       {
+      "match": "Spain vs Argentina",
+      "home": "Spain",
+      "away": "Argentina",
+      "model": "Tsoofit",
+      "prediction": {
+        "result_90min": "draw",
+        "score_90min": "1-1",
+        "home_win_probability": 30,
+        "draw_probability": 40,
+        "away_win_probability": 30,
+        "extra_time_probability": 40,
+        "penalty_probability": 5,
+        "final_winner": "home",
+        "confidence": 60,
+        "risk_level": "medium",
+        "reasoning": "Spain is stronger."
+      },
+      "actual": null,
+      "created_at": "2026-07-18T16:59:15.064126"
+    },
+    {
+      "match": "France vs England",
+      "home": "France",
+      "away": "England",
+      "model": "GPT",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "3-1",
+        "home_win_probability": 51,
+        "draw_probability": 24,
+        "away_win_probability": 25,
+        "extra_time_probability": 24,
+        "penalty_probability": 10,
+        "final_winner": "home",
+        "confidence": 62,
+        "risk_level": "medium",
+        "reasoning": "France have the deeper attacking rotation, stronger tournament chance creation, and added motivation to win Didier Deschamps\u2019 final match, with Mbappe also pursuing the Golden Boot. England may rotate after a physically and emotionally draining semifinal, while their recent defensive game management has been vulnerable. The freer third-place setting should produce an open match that slightly favors France\u2019s pace and bench quality."
+      },
+      "actual": null,
+      "created_at": "2026-07-18T17:22:07.772649"
+    },
+    {
+      "match": "France vs England",
+      "home": "France",
+      "away": "England",
+      "model": "Claude",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "2-1",
+        "home_win_probability": 51,
+        "draw_probability": 27,
+        "away_win_probability": 22,
+        "extra_time_probability": 0,
+        "penalty_probability": 27,
+        "final_winner": "home",
+        "confidence": 68,
+        "risk_level": "medium",
+        "reasoning": "France are consistent favorites across markets (Opta 50.7% in 90 minutes, -112 regulation odds) on the back of Mbappe's tournament-leading eight goals and a Golden Boot incentive since Messi is already through to the final, plus a psychological edge from a 9-match unbeaten head-to-head run. Per FIFA's third-place playoff rules a level match goes straight to penalties with no extra time, but both sides' attacking freedom and lack of knockout tension make a decisive 90-minute result more likely than a stalemate."
+      },
+      "actual": null,
+      "created_at": "2026-07-18T17:22:30.957379"
+    },
+    {
+      "match": "France vs England",
+      "home": "France",
+      "away": "England",
+      "model": "Gemini",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "3-2",
+        "home_win_probability": 45,
+        "draw_probability": 25,
+        "away_win_probability": 30,
+        "extra_time_probability": 25,
+        "penalty_probability": 10,
+        "final_winner": "home",
+        "confidence": 65,
+        "risk_level": "high",
+        "reasoning": "With Kylian Mbapp\u00e9 and Harry Kane both chasing the Golden Boot, expect an open, high-scoring match as both teams abandon semifinal conservatism. Third-place playoffs typically feature heavy rotation and end-to-end transitions, heavily favoring France's superior attacking depth. Furthermore, England's emotional and physical fatigue from their grueling loss to Argentina will allow Les Bleus to secure victory in regulation."
+      },
+      "actual": null,
+      "created_at": "2026-07-18T17:24:07.491259"
+    },
+    {
+      "match": "France vs England",
+      "home": "France",
+      "away": "England",
+      "model": "Codex",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "2-1",
+        "home_win_probability": 51,
+        "draw_probability": 24,
+        "away_win_probability": 25,
+        "extra_time_probability": 24,
+        "penalty_probability": 10,
+        "final_winner": "home",
+        "confidence": 61,
+        "risk_level": "medium",
+        "reasoning": "France have the stronger attacking depth and clearer motivation around Mbappe's Golden Boot chase and Deschamps' final match. England carry more fatigue and injury uncertainty, especially around Reece James and midfield balance, though Kane and Bellingham keep their scoring threat real. Third-place games are usually more open than semifinals, so France edging a goal-trading match is the most realistic path."
+      },
+      "actual": null,
+      "created_at": "2026-07-18T17:24:39.114173"
+    },
+    {
+      "match": "France vs England",
+      "home": "France",
+      "away": "England",
+      "model": "Tsoofit",
+      "prediction": {
+        "result_90min": "home",
+        "score_90min": "3-2",
+        "home_win_probability": 80,
+        "draw_probability": 15,
+        "away_win_probability": 5,
+        "extra_time_probability": 15,
+        "penalty_probability": 5,
+        "final_winner": "home",
+        "confidence": 80,
+        "risk_level": "medium",
+        "reasoning": "France have the stronger attacking depth and clearer motivation around Mbappe's Golden Boot chase and Deschamps' final match."
+      },
+      "actual": null,
+      "created_at": "2026-07-18T17:24:39.114173"
     }
   ]
 }
