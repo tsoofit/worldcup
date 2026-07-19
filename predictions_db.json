@@ -1914,7 +1914,7 @@
       "actual": null,
       "created_at": "2026-07-18T16:59:15.064126"
     },
-       {
+    {
       "match": "Spain vs Argentina",
       "home": "Spain",
       "away": "Argentina",
@@ -1953,7 +1953,13 @@
         "risk_level": "medium",
         "reasoning": "France have the deeper attacking rotation, stronger tournament chance creation, and added motivation to win Didier Deschamps\u2019 final match, with Mbappe also pursuing the Golden Boot. England may rotate after a physically and emotionally draining semifinal, while their recent defensive game management has been vulnerable. The freer third-place setting should produce an open match that slightly favors France\u2019s pace and bench quality."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "4-6",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-18T17:22:07.772649"
     },
     {
@@ -1974,7 +1980,13 @@
         "risk_level": "medium",
         "reasoning": "France are consistent favorites across markets (Opta 50.7% in 90 minutes, -112 regulation odds) on the back of Mbappe's tournament-leading eight goals and a Golden Boot incentive since Messi is already through to the final, plus a psychological edge from a 9-match unbeaten head-to-head run. Per FIFA's third-place playoff rules a level match goes straight to penalties with no extra time, but both sides' attacking freedom and lack of knockout tension make a decisive 90-minute result more likely than a stalemate."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "4-6",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-18T17:22:30.957379"
     },
     {
@@ -1995,7 +2007,13 @@
         "risk_level": "high",
         "reasoning": "With Kylian Mbapp\u00e9 and Harry Kane both chasing the Golden Boot, expect an open, high-scoring match as both teams abandon semifinal conservatism. Third-place playoffs typically feature heavy rotation and end-to-end transitions, heavily favoring France's superior attacking depth. Furthermore, England's emotional and physical fatigue from their grueling loss to Argentina will allow Les Bleus to secure victory in regulation."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "4-6",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-18T17:24:07.491259"
     },
     {
@@ -2016,7 +2034,13 @@
         "risk_level": "medium",
         "reasoning": "France have the stronger attacking depth and clearer motivation around Mbappe's Golden Boot chase and Deschamps' final match. England carry more fatigue and injury uncertainty, especially around Reece James and midfield balance, though Kane and Bellingham keep their scoring threat real. Third-place games are usually more open than semifinals, so France edging a goal-trading match is the most realistic path."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "4-6",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-18T17:24:39.114173"
     },
     {
@@ -2037,7 +2061,13 @@
         "risk_level": "medium",
         "reasoning": "France have the stronger attacking depth and clearer motivation around Mbappe's Golden Boot chase and Deschamps' final match."
       },
-      "actual": null,
+      "actual": {
+        "score_90min": "4-6",
+        "result_90min": "away",
+        "final_winner": "away",
+        "went_extra_time": false,
+        "went_penalties": false
+      },
       "created_at": "2026-07-18T17:24:39.114173"
     }
   ]
